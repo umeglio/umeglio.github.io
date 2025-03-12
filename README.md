@@ -8,8 +8,6 @@ Questo repository contiene il codice sorgente del mio sito web personale e profe
 - [Tecnologie Utilizzate](#tecnologie-utilizzate)
 - [Struttura del Sito](#struttura-del-sito)
 - [Caratteristiche](#caratteristiche)
-- [Installazione e Sviluppo Locale](#installazione-e-sviluppo-locale)
-- [Aggiornamenti e Manutenzione](#aggiornamenti-e-manutenzione)
 - [Contatti](#contatti)
 
 ## Panoramica
@@ -47,47 +45,11 @@ Il sito è organizzato nelle seguenti sezioni:
 - **SEO-Friendly**: Struttura semantica ottimizzata per i motori di ricerca
 - **Accessibilità**: Conforme alle linee guida WCAG per l'accessibilità
 
-## Installazione e Sviluppo Locale
-
-Per eseguire questo sito localmente:
-
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/umeglio/umeglio.github.io.git
-   ```
-
-2. Naviga nella directory del progetto:
-   ```bash
-   cd umeglio.github.io
-   ```
-
-3. Apri il file `index.html` nel tuo browser preferito o utilizza un server locale come Live Server per Visual Studio Code.
-
-## Aggiornamenti e Manutenzione
-
-Il sito viene aggiornato periodicamente con nuovi progetti, competenze e informazioni professionali. Per contribuire o suggerire modifiche:
-
-1. Crea un fork del repository
-2. Crea un branch per le tue modifiche:
-   ```bash
-   git checkout -b feature/nuova-sezione
-   ```
-3. Effettua le modifiche desiderate
-4. Esegui un commit delle modifiche:
-   ```bash
-   git commit -m "Aggiunta nuova sezione progetti"
-   ```
-5. Esegui il push al tuo fork:
-   ```bash
-   git push origin feature/nuova-sezione
-   ```
-6. Apri una Pull Request
-
 ## Contatti
 
 Per domande, suggerimenti o collaborazioni, puoi contattarmi tramite:
 
-- Email: [umberto.meglio@example.com](mailto:umberto.meglio@example.com)
+- Email: [umberto.meglio@sipos.it](mailto:umberto.meglio@sipos.it)
 - GitHub: [@umeglio](https://github.com/umeglio)
 - LinkedIn: [Umberto Meglio](https://linkedin.com/in/umbertomeglio)
 
