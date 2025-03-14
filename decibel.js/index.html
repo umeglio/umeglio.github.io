@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misuratore di Decibel Ambientale</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Misuratore di Decibel Ambientale</h1>
+            <p class="subtitle">Monitora in tempo reale il livello di rumore nel tuo ambiente</p>
+        </header>
+
+        <main>
+            <div class="meter-container">
+                <div class="meter">
+                    <div class="meter-gauge">
+                        <div class="meter-value" id="db-value">0 dB</div>
+                        <div class="meter-needle" id="needle"></div>
+                        <div class="meter-scale">
+                            <span>0</span>
+                            <span>20</span>
+                            <span>40</span>
+                            <span>60</span>
+                            <span>80</span>
+                            <span>100</span>
+                            <span>120</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn primary">
+                    <i class="fas fa-microphone"></i> Avvia Misurazione
+                </button>
+                <button id="stop-btn" class="btn secondary" disabled>
+                    <i class="fas fa-stop"></i> Ferma
+                </button>
+                <button id="save-btn" class="btn tertiary" disabled>
+                    <i class="fas fa-save"></i> Salva Dati
+                </button>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Livello Corrente</h3>
+                    <p id="current-level">0 dB</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Livello Minimo</h3>
+                    <p id="min-level">0 dB</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Livello Massimo</h3>
+                    <p id="max-level">0 dB</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Media</h3>
+                    <p id="avg-level">0 dB</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="noise-chart"></canvas>
+            </div>
+
+            <div class="noise-reference">
+                <h3>Riferimenti Indicativi dei Livelli di Rumore</h3>
+                <div class="reference-table">
+                    <div class="reference-item">
+                        <span class="level quiet">30 dB</span>
+                        <span class="description">Sussurro, ambiente tranquillo</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="level moderate">50-60 dB</span>
+                        <span class="description">Conversazione normale</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="level loud">70-80 dB</span>
+                        <span class="description">Traffico cittadino, aspirapolvere</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="level very-loud">90-100 dB</span>
+                        <span class="description">Motosega, concerto</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="level dangerous">110+ dB</span>
+                        <span class="description">Martello pneumatico, jet (pericoloso)</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Progetto Open Source | <a href="https://umeglio.github.io/decibel.js" target="_blank">Visualizza su GitHub</a></p>
+            <p>Nota: La precisione della misurazione dipende dal microfono e dal dispositivo utilizzati</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
