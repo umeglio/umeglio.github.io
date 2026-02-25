@@ -428,6 +428,40 @@
 
         .project-links a:hover { color: var(--primary-color); }
 
+        /* ======= PROJECT SUBSECTIONS ======= */
+        .projects-subsection {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .projects-subsection:first-of-type {
+            margin-top: 0;
+        }
+
+        .projects-subsection h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .projects-subsection h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background-color: var(--secondary-color);
+            opacity: 0.5;
+        }
+
+        .project-card.expertise .project-header {
+            background: linear-gradient(135deg, #0d4d4d, #1a8a8a);
+        }
+
         /* ======= CONTACT ======= */
         .contact-container { display: flex; flex-wrap: wrap; gap: 2rem; }
         .contact-info { flex: 1; min-width: 300px; }
@@ -674,6 +708,9 @@
             <div class="section-title">
                 <h2>Progetti</h2>
             </div>
+            <div class="projects-subsection">
+                <h3>&#x1F4BB; Progetti Open Source</h3>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -744,6 +781,102 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/umeglio/TechDetectorPro" target="_blank">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-subsection">
+                <h3>&#x1F3AF; Expertise Professionali</h3>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Sistema Avanzato di Analisi Dati</h3>
+                        <span class="project-type">Expertise &middot; MonetDB</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Progettazione e implementazione di un sistema avanzato di analisi dati basato su MonetDB, ottimizzato per query analitiche ad alte prestazioni su grandi volumi di dati aziendali. Integrazione con pipeline ETL personalizzate per alimentazione dati in tempo reale.</p>
+                        <div class="project-tags">
+                            <span class="tag">MonetDB</span>
+                            <span class="tag">Analisi Dati</span>
+                            <span class="tag">ETL</span>
+                            <span class="tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Infrastruttura Virtualizzata per Ambienti Critici</h3>
+                        <span class="project-type">Expertise &middot; Virtualizzazione</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Architettura e gestione di infrastrutture virtualizzate mission-critical utilizzando VMware, Veeam, Proxmox e QEMU. Implementazione di soluzioni ad alta disponibilit&agrave;, disaster recovery e backup automatizzato per garantire continuit&agrave; operativa.</p>
+                        <div class="project-tags">
+                            <span class="tag">VMware</span>
+                            <span class="tag">Veeam</span>
+                            <span class="tag">Proxmox</span>
+                            <span class="tag">QEMU</span>
+                            <span class="tag">Alta Disponibilit&agrave;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Implementazione Avanzata di Sicurezza Perimetrale</h3>
+                        <span class="project-type">Expertise &middot; Fortinet</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Progettazione e implementazione di architetture di sicurezza perimetrale enterprise con soluzioni Fortinet. Configurazione avanzata di firewall, sistemi IPS/IDS, VPN e segmentazione di rete per la protezione di infrastrutture critiche.</p>
+                        <div class="project-tags">
+                            <span class="tag">Fortinet</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Network Security</span>
+                            <span class="tag">IPS/IDS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Integrazione di Modelli AI in Sistemi Legacy</h3>
+                        <span class="project-type">Expertise &middot; Intelligenza Artificiale</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Integrazione di modelli di intelligenza artificiale (OpenAI, Anthropic, NVIDIA) all'interno di sistemi legacy aziendali. Sviluppo di API bridge, workflow di automazione e soluzioni di NLP per modernizzare processi esistenti senza ristrutturazione completa.</p>
+                        <div class="project-tags">
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">Anthropic</span>
+                            <span class="tag">NVIDIA</span>
+                            <span class="tag">Integrazione AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Sistema ETL per Integrazioni Dati Multipiattaforma</h3>
+                        <span class="project-type">Expertise &middot; Data Engineering</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Progettazione e sviluppo di pipeline ETL complesse per l'integrazione di dati provenienti da molteplici piattaforme eterogenee. Orchestrazione di flussi di trasformazione dati, data warehouse e sistemi di reporting per supportare decisioni aziendali data-driven.</p>
+                        <div class="project-tags">
+                            <span class="tag">ETL</span>
+                            <span class="tag">Data Integration</span>
+                            <span class="tag">Data Warehouse</span>
+                            <span class="tag">Big Data</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card expertise">
+                    <div class="project-header">
+                        <h3>Sperimentazione con DWAVE per Ottimizzazione</h3>
+                        <span class="project-type">Expertise &middot; Quantum Computing</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Sperimentazione con il quantum computing tramite piattaforma DWAVE per la risoluzione di problemi di ottimizzazione combinatoria. Esplorazione di algoritmi quantistici per applicazioni pratiche in ambito logistico e di scheduling aziendale.</p>
+                        <div class="project-tags">
+                            <span class="tag">DWAVE</span>
+                            <span class="tag">Quantum Computing</span>
+                            <span class="tag">Ottimizzazione</span>
                         </div>
                     </div>
                 </div>
