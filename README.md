@@ -2,12 +2,17 @@
 
 Questo repository contiene il codice sorgente del mio sito web personale e professionale, accessibile all'indirizzo [umeglio.github.io](https://umeglio.github.io).
 
+**[🇬🇧 English Version](README_en.md)**
+
 ## Sommario
 
 - [Panoramica](#panoramica)
 - [Tecnologie Utilizzate](#tecnologie-utilizzate)
 - [Struttura del Sito](#struttura-del-sito)
 - [Caratteristiche](#caratteristiche)
+- [Installazione e Configurazione](#installazione-e-configurazione)
+- [Utilizzo](#utilizzo)
+- [Contributi](#contributi)
 - [Contatti](#contatti)
 
 ## Panoramica
@@ -44,6 +49,24 @@ Il sito è organizzato nelle seguenti sezioni:
 - **Performance Ottimizzata**: Caricamento rapido e interazioni fluide
 - **SEO-Friendly**: Struttura semantica ottimizzata per i motori di ricerca
 - **Accessibilità**: Conforme alle linee guida WCAG per l'accessibilità
+
+## Installazione e Configurazione
+
+Per maggiori informazioni su come configurare e utilizzare questo repository, consulta:
+
+- [Guida di Installazione](docs/it/INSTALLAZIONE.md)
+- [Guida di Utilizzo](docs/it/UTILIZZO.md)
+- [Contribuire al Progetto](docs/it/CONTRIBUIRE.md)
+
+## Utilizzo
+
+Per accedere al sito web online, visita: **[umeglio.github.io](https://umeglio.github.io)**
+
+Per modifiche locali e sviluppo, consulta la [Guida di Utilizzo](docs/it/UTILIZZO.md).
+
+## Contributi
+
+I contributi sono benvenuti! Per dettagli, consulta [CONTRIBUIRE.md](docs/it/CONTRIBUIRE.md).
 
 ## Contatti
 
