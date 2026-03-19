@@ -2,7 +2,7 @@
 
 Questo repository contiene il codice sorgente del mio sito web personale e professionale, accessibile all'indirizzo [umeglio.github.io](https://umeglio.github.io).
 
-**[🇬🇧 English Version](README_en.md)**
+**[🇬🇧 English Version](README.md)**
 
 ## Sommario
 
