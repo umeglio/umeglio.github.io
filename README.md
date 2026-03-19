@@ -1,76 +1,76 @@
-# Umberto Meglio - Sito Web Professionale
+# Umberto Meglio - Professional Website
 
-Questo repository contiene il codice sorgente del mio sito web personale e professionale, accessibile all'indirizzo [umeglio.github.io](https://umeglio.github.io).
+This repository contains the source code of my personal and professional website, accessible at [umeglio.github.io](https://umeglio.github.io).
 
-**[🇬🇧 English Version](README_en.md)**
+**[🇮🇹 Versione Italiana](README.md)**
 
-## Sommario
+## Table of Contents
 
-- [Panoramica](#panoramica)
-- [Tecnologie Utilizzate](#tecnologie-utilizzate)
-- [Struttura del Sito](#struttura-del-sito)
-- [Caratteristiche](#caratteristiche)
-- [Installazione e Configurazione](#installazione-e-configurazione)
-- [Utilizzo](#utilizzo)
-- [Contributi](#contributi)
-- [Contatti](#contatti)
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Website Structure](#website-structure)
+- [Features](#features)
+- [Installation and Configuration](#installation-and-configuration)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-## Panoramica
+## Overview
 
-Questo sito web funge da portfolio professionale e vetrina delle mie competenze nel campo dell'ingegneria delle infrastrutture, virtualizzazione, sviluppo software e analisi dei dati. È progettato per presentare in modo elegante e funzionale il mio percorso professionale, le mie competenze tecniche e i progetti realizzati.
+This website serves as a professional portfolio and showcase of my skills in infrastructure engineering, virtualization, software development, and data analysis. It is designed to elegantly and functionally present my professional journey, technical expertise, and completed projects.
 
-## Tecnologie Utilizzate
+## Technologies Used
 
-Il sito è stato sviluppato utilizzando le seguenti tecnologie:
+The website was developed using the following technologies:
 
-- **HTML5**: per la struttura della pagina
-- **CSS3**: per lo stile e il layout responsivo
-- **JavaScript**: per le animazioni e l'interattività
-- **GitHub Pages**: per l'hosting del sito
+- **HTML5**: for page structure
+- **CSS3**: for styling and responsive layout
+- **JavaScript**: for animations and interactivity
+- **GitHub Pages**: for website hosting
 
-Non sono state utilizzate librerie o framework esterni per garantire velocità di caricamento e semplicità di manutenzione.
+No external libraries or frameworks were used to ensure fast loading times and simple maintenance.
 
-## Struttura del Sito
+## Website Structure
 
-Il sito è organizzato nelle seguenti sezioni:
+The website is organized in the following sections:
 
-1. **Header**: Introduzione e presentazione personale
-2. **Chi Sono**: Breve biografia professionale e informazioni personali
-3. **Competenze**: Visualizzazione delle competenze tecniche con barre di progresso
-4. **Esperienza**: Timeline delle esperienze professionali
-5. **Progetti**: Showcase dei principali progetti realizzati
-6. **Contatti**: Informazioni di contatto e modulo per comunicazioni
+1. **Header**: Introduction and personal presentation
+2. **About Me**: Brief professional biography and personal information
+3. **Skills**: Display of technical skills with progress bars
+4. **Experience**: Timeline of professional experiences
+5. **Projects**: Showcase of main completed projects
+6. **Contact**: Contact information and messaging form
 
-## Caratteristiche
+## Features
 
-- **Design Responsivo**: Ottimizzato per dispositivi desktop, tablet e mobile
-- **Animazioni Fluide**: Animazioni di scroll per migliorare l'esperienza utente
-- **Navigazione Intuitiva**: Menu di navigazione semplice e funzionale
-- **Performance Ottimizzata**: Caricamento rapido e interazioni fluide
-- **SEO-Friendly**: Struttura semantica ottimizzata per i motori di ricerca
-- **Accessibilità**: Conforme alle linee guida WCAG per l'accessibilità
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: Scroll animations to enhance user experience
+- **Intuitive Navigation**: Simple and functional navigation menu
+- **Optimized Performance**: Fast loading and smooth interactions
+- **SEO-Friendly**: Semantic structure optimized for search engines
+- **Accessibility**: Compliant with WCAG accessibility guidelines
 
-## Installazione e Configurazione
+## Installation and Configuration
 
-Per maggiori informazioni su come configurare e utilizzare questo repository, consulta:
+For more information on how to set up and use this repository, see:
 
-- [Guida di Installazione](docs/it/INSTALLAZIONE.md)
-- [Guida di Utilizzo](docs/it/UTILIZZO.md)
-- [Contribuire al Progetto](docs/it/CONTRIBUIRE.md)
+- [Installation Guide](docs/en/INSTALLATION.md)
+- [Usage Guide](docs/en/USAGE.md)
+- [Contributing to the Project](docs/en/CONTRIBUTING.md)
 
-## Utilizzo
+## Usage
 
-Per accedere al sito web online, visita: **[umeglio.github.io](https://umeglio.github.io)**
+To access the website online, visit: **[umeglio.github.io](https://umeglio.github.io)**
 
-Per modifiche locali e sviluppo, consulta la [Guida di Utilizzo](docs/it/UTILIZZO.md).
+For local modifications and development, see the [Usage Guide](docs/en/USAGE.md).
 
-## Contributi
+## Contributing
 
-I contributi sono benvenuti! Per dettagli, consulta [CONTRIBUIRE.md](docs/it/CONTRIBUIRE.md).
+Contributions are welcome! For details, see [CONTRIBUTING.md](docs/en/CONTRIBUTING.md).
 
-## Contatti
+## Contact
 
-Per domande, suggerimenti o collaborazioni, puoi contattarmi tramite:
+For questions, suggestions, or collaboration opportunities, you can contact me via:
 
 - Email: [umberto.meglio@sipos.it](mailto:umberto.meglio@sipos.it)
 - GitHub: [@umeglio](https://github.com/umeglio)
@@ -78,4 +78,4 @@ Per domande, suggerimenti o collaborazioni, puoi contattarmi tramite:
 
 ---
 
-&copy; 2025 Umberto Meglio. Tutti i diritti riservati.
+&copy; 2025 Umberto Meglio. All rights reserved.
