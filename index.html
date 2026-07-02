@@ -526,6 +526,90 @@
 
         .project-links a:hover { text-shadow: 0 0 10px rgba(47, 208, 255, 0.7); }
 
+        /* ======= OLED RUNTIME STRIPS ======= */
+        .oled {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #010409;
+            border: 1px solid rgba(47, 208, 255, 0.18);
+            border-radius: 7px;
+            padding: 7px 12px;
+            margin-bottom: 1.1rem;
+            overflow: hidden;
+            box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.85);
+        }
+
+        .oled::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px);
+            pointer-events: none;
+        }
+
+        .oled .led {
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: ledPulse 2.6s ease-in-out infinite;
+        }
+
+        .oled-view {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+        }
+
+        .oled-track {
+            display: inline-block;
+            font-family: var(--font-dots);
+            font-size: 0.76rem;
+            letter-spacing: 0.1em;
+            animation: oledScroll 26s linear infinite;
+        }
+
+        .project-card:hover .oled-track { animation-duration: 13s; }
+
+        .oled.cyan  { color: #7ddfff; }
+        .oled.cyan .led  { background: var(--cyan);  box-shadow: 0 0 8px var(--cyan); }
+        .oled.green { color: #8fffc4; }
+        .oled.green .led { background: var(--green); box-shadow: 0 0 8px var(--green); }
+        .oled.amber { color: #ffd98a; }
+        .oled.amber .led { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+        @keyframes oledScroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        @keyframes ledPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.25; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 0.55em;
+            height: 1em;
+            margin-left: 5px;
+            vertical-align: -0.12em;
+            background: var(--amber);
+            box-shadow: 0 0 8px rgba(255, 207, 107, 0.6);
+            animation: blink 1.1s steps(1) infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .oled-track, .oled .led, .cursor,
+            header::before, .profile-img { animation: none !important; }
+        }
+
         .projects-subsection {
             margin-top: 3rem;
             margin-bottom: 1.5rem;
@@ -814,7 +898,7 @@
                 <div class="profile-img" id="profileImg"><img src="avatar.png" alt="Umberto Meglio"></div>
                 <div class="header-text">
                     <h1>Umberto Meglio</h1>
-                    <p class="header-tagline">where data speaks C.</p>
+                    <p class="header-tagline">where data speaks C.<span class="cursor"></span></p>
                     <div class="title-row">
                         <span class="badge">Ingegnere delle Infrastrutture</span>
                         <span class="badge">Esperto in Virtualizzazione</span>
@@ -978,6 +1062,7 @@
                         <span class="project-type">Typeface &middot; CC0</span>
                     </div>
                     <div class="project-info">
+                        <div class="oled amber"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRAFONT RUNTIME :: 21 CUTS :: DOTS LINEAR SPLINE :: 5X7 MATRIX :: CC0 PUBLIC DOMAIN :: OLED READY :: &nbsp;MIRAFONT RUNTIME :: 21 CUTS :: DOTS LINEAR SPLINE :: 5X7 MATRIX :: CC0 PUBLIC DOMAIN :: OLED READY :: &nbsp;</span></span></div>
                         <p>Il mio carattere tipografico originale: 21 tagli in 3 texture generati da una matrice di nodi 5&times;7, dal web ai display OLED su ESP32. Rilasciato in pubblico dominio. &Egrave; il font che stai leggendo su questa pagina.</p>
                         <div class="project-tags">
                             <span class="tag">Typography</span>
@@ -989,6 +1074,44 @@
                             <a href="https://github.com/umeglio/miraFONT" target="_blank">GitHub &rarr;</a>
                             &nbsp;&nbsp;
                             <a href="#mirafont">Scopri di pi&ugrave; &darr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card">
+                    <div class="project-header">
+                        <h3>dev-id</h3>
+                        <span class="project-type">Network Inventory &middot; ANSI C</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="oled cyan"><span class="led"></span><span class="oled-view"><span class="oled-track">SCAN 10.0.0.0/24 :: ARP ICMP TCP UDP :: 254 HOSTS ONLINE :: MAC OUI DNS TTL :: CSV REPORT OK :: &nbsp;SCAN 10.0.0.0/24 :: ARP ICMP TCP UDP :: 254 HOSTS ONLINE :: MAC OUI DNS TTL :: CSV REPORT OK :: &nbsp;</span></span></div>
+                        <p>Utility di network inventory in ANSI C: scansione multi-thread di intere reti via ARP, ICMP, TCP e UDP con risoluzione DNS inversa, MAC address, stima del sistema operativo dal TTL e report CSV con lookup dei vendor OUI.</p>
+                        <div class="project-tags">
+                            <span class="tag">ANSI C</span>
+                            <span class="tag">Networking</span>
+                            <span class="tag">Multi-Thread</span>
+                            <span class="tag">CSV Report</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/umeglio/devid" target="_blank">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card">
+                    <div class="project-header">
+                        <h3>Monet_OleDB</h3>
+                        <span class="project-type">Provider OLE DB &middot; ANSI C</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="oled green"><span class="led"></span><span class="oled-view"><span class="oled-track">SQLSERVER &lt;&gt; MONETDB :: LINKED SERVER ONLINE :: OPENQUERY EXEC AT :: 13 SCHEMA ROWSETS :: FETCH OK :: &nbsp;SQLSERVER &lt;&gt; MONETDB :: LINKED SERVER ONLINE :: OPENQUERY EXEC AT :: 13 SCHEMA ROWSETS :: FETCH OK :: &nbsp;</span></span></div>
+                        <p>Provider OLE DB nativo in ANSI C che collega SQL Server a MonetDB tramite driver ODBC. Si registra come DLL COM in-process e appare tra i Linked Server: query dirette, OPENQUERY, EXEC AT e navigazione del catalogo da SSMS.</p>
+                        <div class="project-tags">
+                            <span class="tag">ANSI C</span>
+                            <span class="tag">OLE DB</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">MonetDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/umeglio/Monet_OleDB" target="_blank">GitHub &rarr;</a>
                         </div>
                     </div>
                 </div>
