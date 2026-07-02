@@ -4,77 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umberto Meglio - Ingegnere delle Infrastrutture esperto di programmazione, sicurezza informatica e AI</title>
+    <meta name="description" content="Umberto Meglio — Ingegnere delle Infrastrutture, CIO di Sipos Srl. Virtualizzazione, sicurezza informatica, AI, ETL e miraFONT.">
+    <link rel="stylesheet" href="https://umeglio.github.io/miraFONT/fonts/miraFONT.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-            --glow-cyan: #00d4ff;
-            --deep-navy: #0a0e1a;
+            --bg: #03060f;
+            --bg-2: #081026;
+            --panel: #0a1430;
+            --panel-2: #060d20;
+            --line: rgba(47, 208, 255, 0.16);
+            --cyan: #2fd0ff;
+            --cyan-soft: #a8ecff;
+            --text: #d6ecff;
+            --muted: #8fb6e0;
+            --dim: #6a82ab;
+            --green: #7dffb0;
+            --amber: #ffcf6b;
+            --font-display: 'miraFONT Spline', 'Courier New', monospace;
+            --font-body: 'miraFONT Linear', ui-monospace, 'Cascadia Mono', 'Courier New', monospace;
+            --font-dots: 'miraFONT', ui-monospace, 'Courier New', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
+            font-family: var(--font-body);
+            line-height: 1.9;
+            color: var(--text);
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(30, 123, 255, 0.12), transparent),
+                linear-gradient(rgba(47, 208, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(47, 208, 255, 0.025) 1px, transparent 1px);
+            background-size: 100% 100%, 44px 44px, 44px 44px;
+            background-attachment: fixed;
+            font-size: 15px;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        ::selection { background: rgba(47, 208, 255, 0.35); color: #fff; }
 
-        /* ======= HEADER - Miranet / Laputa Sky Theme ======= */
+        a { color: var(--cyan); }
+
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ======= NAVIGATION ======= */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(3, 6, 15, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .nav-brand {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 1.05rem;
+            letter-spacing: 0.14em;
+            text-shadow: 0 0 12px rgba(47, 208, 255, 0.5);
+            white-space: nowrap;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul a {
+            display: block;
+            padding: 14px 12px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+
+        nav ul a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 10px rgba(47, 208, 255, 0.6);
+        }
+
+        .language-switch { display: flex; gap: 6px; }
+
+        .language-btn {
+            font-family: var(--font-body);
+            background: transparent;
+            color: var(--dim);
+            border: 1px solid var(--line);
+            padding: 4px 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            transition: all 0.25s;
+        }
+
+        .language-btn:hover, .language-btn.active {
+            background: rgba(47, 208, 255, 0.12);
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        /* ======= HEADER ======= */
         header {
-            background: linear-gradient(170deg, #0a0e1a 0%, #0d1b3e 30%, #1a3a5c 55%, #2980b9 80%, #6dd5fa 100%);
-            color: white;
-            padding: 3rem 0 2.5rem;
             position: relative;
             overflow: hidden;
-            min-height: 380px;
+            padding: 5rem 0 4rem;
+            background:
+                radial-gradient(ellipse 70% 60% at 50% 0%, rgba(12, 33, 80, 0.9), transparent),
+                var(--bg);
+            border-bottom: 1px solid var(--line);
         }
 
-        /* Floating particles / stars */
         header::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            inset: 0;
             background:
                 radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8), transparent),
-                radial-gradient(1px 1px at 25% 50%, rgba(255,255,255,0.6), transparent),
-                radial-gradient(2px 2px at 40% 15%, rgba(0,212,255,0.7), transparent),
+                radial-gradient(1px 1px at 25% 50%, rgba(255,255,255,0.5), transparent),
+                radial-gradient(2px 2px at 40% 15%, rgba(47,208,255,0.7), transparent),
                 radial-gradient(1px 1px at 55% 40%, rgba(255,255,255,0.5), transparent),
                 radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.7), transparent),
-                radial-gradient(2px 2px at 85% 45%, rgba(0,212,255,0.5), transparent),
-                radial-gradient(1px 1px at 15% 70%, rgba(255,255,255,0.4), transparent),
-                radial-gradient(1px 1px at 50% 65%, rgba(255,255,255,0.6), transparent),
-                radial-gradient(2px 2px at 75% 60%, rgba(0,212,255,0.4), transparent),
-                radial-gradient(1px 1px at 90% 15%, rgba(255,255,255,0.5), transparent),
-                radial-gradient(1px 1px at 35% 85%, rgba(255,255,255,0.3), transparent),
-                radial-gradient(1px 1px at 60% 80%, rgba(0,212,255,0.3), transparent);
+                radial-gradient(2px 2px at 85% 45%, rgba(47,208,255,0.5), transparent),
+                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4), transparent),
+                radial-gradient(1px 1px at 50% 68%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 78% 70%, rgba(47,208,255,0.4), transparent),
+                radial-gradient(1px 1px at 92% 18%, rgba(255,255,255,0.5), transparent);
             animation: twinkle 4s ease-in-out infinite alternate;
             pointer-events: none;
         }
 
-        /* Floating island silhouette */
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background:
-                radial-gradient(ellipse 120px 30px at 15% 100%, rgba(255,255,255,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 200px 40px at 50% 100%, rgba(255,255,255,0.05) 0%, transparent 70%),
-                radial-gradient(ellipse 100px 25px at 80% 100%, rgba(255,255,255,0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
         @keyframes twinkle {
-            0% { opacity: 0.6; }
+            0% { opacity: 0.5; }
             100% { opacity: 1; }
         }
 
@@ -84,8 +165,8 @@
         }
 
         @keyframes glowPulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(0,212,255,0.4), 0 0 40px rgba(0,212,255,0.1); }
-            50% { box-shadow: 0 0 30px rgba(0,212,255,0.6), 0 0 60px rgba(0,212,255,0.2); }
+            0%, 100% { box-shadow: 0 0 20px rgba(47,208,255,0.4), 0 0 50px rgba(47,208,255,0.12); }
+            50% { box-shadow: 0 0 32px rgba(47,208,255,0.65), 0 0 70px rgba(47,208,255,0.2); }
         }
 
         .header-content {
@@ -98,20 +179,13 @@
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 156px;
+            height: 156px;
             border-radius: 50%;
-            border: 3px solid var(--glow-cyan);
-            margin-bottom: 1rem;
-            background-color: rgba(10,14,26,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
-            color: var(--glow-cyan);
-            font-weight: 700;
+            border: 2px solid var(--cyan);
+            margin-bottom: 1.4rem;
+            background-color: rgba(8, 16, 38, 0.7);
             animation: float 6s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
-            object-fit: cover;
             overflow: hidden;
         }
 
@@ -126,31 +200,42 @@
         .miranet-brand {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-            letter-spacing: 3px;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.24em;
             text-transform: uppercase;
-            color: var(--glow-cyan);
-            opacity: 0.9;
+            color: var(--cyan);
+            text-shadow: 0 0 14px rgba(47, 208, 255, 0.45);
         }
 
         .miranet-brand span {
             display: inline-block;
-            width: 20px;
+            width: 26px;
             height: 1px;
-            background: var(--glow-cyan);
+            background: var(--cyan);
             opacity: 0.5;
         }
 
         .header-text h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            font-family: var(--font-display);
             font-weight: 700;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            font-size: clamp(2.1rem, 6vw, 3.4rem);
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
+            color: var(--cyan);
+            text-shadow: 0 0 18px rgba(47, 208, 255, 0.4);
+            letter-spacing: 0.02em;
         }
 
-        .header-text .title-row {
+        .header-tagline {
+            color: var(--amber);
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.6rem;
+        }
+
+        .title-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -158,107 +243,73 @@
             margin-bottom: 8px;
         }
 
-        .header-text .badge {
-            background: rgba(0,212,255,0.12);
+        .badge {
+            background: rgba(47, 208, 255, 0.08);
             padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: rgba(255,255,255,0.9);
-            display: inline-block;
-            border: 1px solid rgba(0,212,255,0.25);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border: 1px solid var(--line);
             transition: all 0.3s;
             backdrop-filter: blur(4px);
         }
 
-        .header-text .badge:hover {
-            background: rgba(0,212,255,0.25);
-            border-color: var(--glow-cyan);
+        .badge:hover {
+            background: rgba(47, 208, 255, 0.18);
+            border-color: var(--cyan);
+            color: var(--cyan-soft);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,212,255,0.2);
+            box-shadow: 0 4px 18px rgba(47, 208, 255, 0.25);
         }
-
-        .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-
-        .language-btn {
-            background: transparent;
-            color: rgba(255,255,255,0.7);
-            border: 1px solid rgba(255,255,255,0.25);
-            padding: 5px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .language-btn:hover, .language-btn.active {
-            background: var(--secondary-color);
-            border-color: var(--secondary-color);
-            color: #fff;
-        }
-
-        /* ======= NAVIGATION ======= */
-        nav {
-            background-color: var(--secondary-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav li { padding: 0; }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 1rem 1.5rem;
-            display: block;
-            font-size: 0.95rem;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover { background-color: rgba(255,255,255,0.15); }
 
         /* ======= SECTIONS ======= */
-        section { padding: 4rem 0; }
-        section:nth-of-type(even) { background-color: var(--light-bg); }
+        section { padding: 4.5rem 0; border-bottom: 1px solid rgba(47, 208, 255, 0.07); }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
+        .section-title { text-align: center; margin-bottom: 3rem; }
+
+        .section-title .kicker {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 6px;
         }
 
         .section-title h2 {
-            font-size: 2.2rem;
-            position: relative;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--cyan);
+            text-shadow: 0 0 16px rgba(47, 208, 255, 0.35);
             display: inline-block;
-            padding-bottom: 10px;
+            position: relative;
+            padding-bottom: 12px;
+            letter-spacing: 0.03em;
         }
 
         .section-title h2::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 25%;
-            width: 50%;
-            height: 3px;
-            background-color: var(--secondary-color);
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+            box-shadow: 0 0 10px rgba(47, 208, 255, 0.6);
+        }
+
+        .card {
+            background: linear-gradient(180deg, var(--panel), var(--panel-2));
+            border: 1px solid var(--line);
+            border-radius: 11px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(47, 208, 255, 0.45);
+            box-shadow: 0 8px 30px rgba(47, 208, 255, 0.12), 0 0 0 1px rgba(47, 208, 255, 0.1);
+            transform: translateY(-4px);
         }
 
         /* ======= ABOUT ======= */
@@ -269,56 +320,94 @@
             align-items: flex-start;
         }
 
-        .about-text { flex: 1; min-width: 300px; }
-        .about-text p { margin-bottom: 1rem; }
+        .about-text { flex: 1.4; min-width: 300px; }
+        .about-text p { margin-bottom: 1rem; color: var(--muted); font-size: 0.92rem; }
+        .about-text a { color: var(--cyan); text-decoration: none; }
+        .about-text a:hover { text-decoration: underline; }
 
-        .about-info { flex: 1; min-width: 300px; }
-        .info-item { margin-bottom: 1rem; }
-        .info-item strong { color: var(--primary-color); margin-right: 0.5rem; }
+        .about-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 1.6rem;
+        }
+
+        .about-info-title {
+            font-size: 0.72rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .info-item { margin-bottom: 0.9rem; font-size: 0.88rem; color: var(--muted); }
+        .info-item strong { display: block; color: var(--green); font-weight: 400; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; }
 
         /* ======= SKILLS ======= */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.6rem;
         }
 
-        .skill-category {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        .skill-category { padding: 1.5rem; }
 
         .skill-category h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--light-bg);
-            padding-bottom: 0.5rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--cyan-soft);
+            font-size: 1.05rem;
+            margin-bottom: 1.1rem;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 0.6rem;
+            letter-spacing: 0.04em;
         }
 
-        .skill-item { margin: 0.8rem 0; }
-        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
-        .skill-bar { height: 8px; background-color: var(--light-bg); border-radius: 4px; overflow: hidden; }
-        .skill-progress { height: 100%; background-color: var(--secondary-color); }
+        .skill-item { margin: 0.9rem 0; }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.35rem;
+            font-size: 0.84rem;
+            color: var(--muted);
+        }
+
+        .skill-name span:last-child { color: var(--green); }
+
+        .skill-bar {
+            height: 6px;
+            background: rgba(47, 208, 255, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+            border: 1px solid rgba(47, 208, 255, 0.1);
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #1e7bff, var(--cyan));
+            box-shadow: 0 0 10px rgba(47, 208, 255, 0.55);
+            border-radius: 3px;
+        }
 
         /* ======= EXPERIENCE ======= */
-        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline { position: relative; max-width: 820px; margin: 0 auto; }
 
         .timeline::after {
             content: '';
             position: absolute;
-            width: 4px;
-            background-color: var(--secondary-color);
+            width: 2px;
+            background: linear-gradient(180deg, transparent, var(--cyan) 8%, var(--cyan) 92%, transparent);
+            opacity: 0.35;
             top: 0; bottom: 0; left: 50%;
-            margin-left: -2px;
+            margin-left: -1px;
         }
 
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
-            box-sizing: border-box;
         }
 
         .timeline-item:nth-child(odd) { left: 0; }
@@ -327,66 +416,76 @@
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 20px; height: 20px;
-            background-color: white;
-            border: 4px solid var(--secondary-color);
+            width: 12px; height: 12px;
+            background-color: var(--bg);
+            border: 2px solid var(--cyan);
             border-radius: 50%;
-            top: 15px; z-index: 1;
+            top: 24px; z-index: 1;
+            box-shadow: 0 0 12px rgba(47, 208, 255, 0.7);
         }
 
-        .timeline-item:nth-child(odd)::after { right: -12px; }
-        .timeline-item:nth-child(even)::after { left: -12px; }
+        .timeline-item:nth-child(odd)::after { right: -8px; }
+        .timeline-item:nth-child(even)::after { left: -8px; }
 
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .timeline-content { padding: 1.4rem 1.5rem; }
+
+        .timeline-content h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--cyan-soft);
+            font-size: 1.02rem;
+            margin-bottom: 0.3rem;
         }
 
-        .timeline-content h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
-        .timeline-content .date { color: var(--secondary-color); font-weight: 500; margin-bottom: 1rem; display: block; }
+        .timeline-content .date {
+            color: var(--amber);
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .timeline-content p { font-size: 0.86rem; color: var(--muted); }
+        .timeline-content a { color: var(--cyan); text-decoration: none; }
 
         /* ======= PROJECTS ======= */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 1.6rem;
         }
 
         .project-card {
-            background-color: white;
-            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-
         .project-header {
-            background: linear-gradient(135deg, var(--primary-color), #1a3a5c);
-            padding: 1.5rem;
-            color: white;
+            padding: 1.3rem 1.5rem 1.1rem;
+            border-bottom: 1px solid var(--line);
+            background: rgba(47, 208, 255, 0.04);
         }
 
         .project-header h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.3rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: var(--cyan);
+            margin-bottom: 0.2rem;
         }
 
         .project-header .project-type {
-            font-size: 0.8rem;
-            opacity: 0.7;
+            font-size: 0.74rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--dim);
         }
 
+        .project-card.expertise .project-header h3 { color: var(--green); }
+
         .project-info {
-            padding: 1.5rem;
+            padding: 1.4rem 1.5rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -394,57 +493,55 @@
 
         .project-info p {
             flex: 1;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: #555;
+            margin-bottom: 1.1rem;
+            font-size: 0.86rem;
+            color: var(--muted);
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
+            gap: 6px;
             margin-bottom: 1rem;
         }
 
         .tag {
-            background-color: var(--light-bg);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.8rem;
-            color: var(--primary-color);
+            background: rgba(47, 208, 255, 0.07);
+            border: 1px solid var(--line);
+            padding: 0.15rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            color: var(--muted);
         }
 
         .project-links a {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: var(--secondary-color);
+            color: var(--cyan);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+            font-size: 0.84rem;
+            transition: text-shadow 0.2s;
         }
 
-        .project-links a:hover { color: var(--primary-color); }
+        .project-links a:hover { text-shadow: 0 0 10px rgba(47, 208, 255, 0.7); }
 
-        /* ======= PROJECT SUBSECTIONS ======= */
         .projects-subsection {
             margin-top: 3rem;
             margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        .projects-subsection:first-of-type {
-            margin-top: 0;
-        }
+        .projects-subsection:first-of-type { margin-top: 0; }
 
         .projects-subsection h3 {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            position: relative;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
             display: inline-block;
-            padding-bottom: 6px;
+            position: relative;
+            padding-bottom: 8px;
         }
 
         .projects-subsection h3::after {
@@ -453,98 +550,271 @@
             bottom: 0;
             left: 20%;
             width: 60%;
-            height: 2px;
-            background-color: var(--secondary-color);
-            opacity: 0.5;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+            opacity: 0.6;
         }
 
-        .project-card.expertise .project-header {
-            background: linear-gradient(135deg, #0d4d4d, #1a8a8a);
+        /* ======= MIRAFONT ======= */
+        #mirafont {
+            background:
+                radial-gradient(ellipse 60% 80% at 50% 50%, rgba(12, 33, 80, 0.55), transparent),
+                var(--bg);
         }
+
+        .mirafont-panel {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 2.6rem 2.4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mirafont-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(47, 208, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(47, 208, 255, 0.04) 1px, transparent 1px);
+            background-size: 22px 22px;
+            pointer-events: none;
+        }
+
+        .mirafont-panel > * { position: relative; }
+
+        .mirafont-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            color: var(--cyan);
+            text-shadow: 0 0 18px rgba(47, 208, 255, 0.4);
+            margin-bottom: 4px;
+        }
+
+        .mirafont-claim {
+            color: var(--amber);
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 1.4rem;
+        }
+
+        .mirafont-panel p.desc { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+        .mirafont-panel p.desc b.cc0 { color: var(--green); font-weight: 400; }
+        .mirafont-panel p.desc.en { color: var(--dim); }
+
+        .mirafont-coming {
+            font-size: 0.88rem;
+            color: var(--amber);
+            border: 1px dashed rgba(255, 207, 107, 0.35);
+            border-radius: 10px;
+            padding: 0.8rem 1.1rem;
+            margin: 1.4rem 0;
+        }
+
+        .mirafont-coming a { color: var(--amber); }
+
+        .mirafont-specimen {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 1.6rem 0;
+        }
+
+        .specimen-cell {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 0.9rem 1rem;
+            background: rgba(3, 6, 15, 0.6);
+        }
+
+        .specimen-cell .label {
+            font-size: 0.68rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--dim);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .specimen-cell .sample {
+            font-size: 1.25rem;
+            color: var(--cyan-soft);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .specimen-cell.dots .sample { font-family: var(--font-dots); }
+        .specimen-cell.linear .sample { font-family: var(--font-body); }
+        .specimen-cell.spline .sample { font-family: var(--font-display); font-weight: 700; }
+
+        .mirafont-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-top: 1.8rem;
+        }
+
+        .btn-primary {
+            font-family: var(--font-body);
+            font-weight: 700;
+            background: var(--cyan);
+            color: #04121a;
+            border-radius: 10px;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            box-shadow: 0 0 20px rgba(47, 208, 255, 0.35);
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 32px rgba(47, 208, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            font-family: var(--font-body);
+            border: 1px solid rgba(47, 208, 255, 0.4);
+            color: var(--text);
+            border-radius: 10px;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: border-color 0.25s, background 0.25s, transform 0.25s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--cyan);
+            background: rgba(47, 208, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .mirafont-actions img { height: 22px; display: block; }
 
         /* ======= CONTACT ======= */
-        .contact-container { display: flex; flex-wrap: wrap; gap: 2rem; }
-        .contact-info { flex: 1; min-width: 300px; }
-        .contact-form { flex: 2; min-width: 300px; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-        .contact-item { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.4rem;
+            text-decoration: none;
+        }
 
         .contact-icon {
-            width: 40px; height: 40px;
-            background-color: var(--secondary-color);
+            width: 42px; height: 42px;
+            flex-shrink: 0;
+            border: 1px solid rgba(47, 208, 255, 0.4);
+            background: rgba(47, 208, 255, 0.08);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            color: white; margin-right: 1rem;
-            flex-shrink: 0;
+            font-size: 1.1rem;
+            box-shadow: 0 0 14px rgba(47, 208, 255, 0.18);
         }
 
-        .contact-text h4 { color: var(--primary-color); margin-bottom: 0.3rem; }
-
-        .form-group { margin-bottom: 1.5rem; }
-
-        .form-control {
-            width: 100%; padding: 0.8rem;
-            border: 1px solid #ddd; border-radius: 4px;
-            font-family: inherit;
+        .contact-text h4 {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dim);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
         }
 
-        textarea.form-control { min-height: 150px; resize: vertical; }
-
-        .btn {
-            background-color: var(--secondary-color);
-            color: white; border: none;
-            padding: 0.8rem 2rem; border-radius: 4px;
-            cursor: pointer; font-weight: 500;
-            transition: background-color 0.3s;
+        .contact-text p, .contact-text a {
+            color: var(--text);
+            font-size: 0.9rem;
+            text-decoration: none;
+            word-break: break-word;
         }
 
-        .btn:hover { background-color: #2980b9; }
+        .contact-text a:hover { color: var(--cyan); }
 
         /* ======= FOOTER ======= */
         footer {
-            background-color: var(--primary-color);
-            color: white; padding: 2rem 0;
+            padding: 2.5rem 0;
             text-align: center;
+            border-top: 1px solid var(--line);
+            background: var(--panel-2);
         }
 
-        .social-links { margin: 1.5rem 0; }
+        .social-links { margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 12px; }
 
         .social-link {
             display: inline-flex; align-items: center; justify-content: center;
-            width: 40px; height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%; margin: 0 0.5rem;
-            color: white; text-decoration: none;
-            transition: background-color 0.3s;
+            padding: 8px 18px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            transition: all 0.25s;
         }
 
-        .social-link:hover { background-color: var(--secondary-color); }
+        .social-link:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            box-shadow: 0 0 16px rgba(47, 208, 255, 0.25);
+        }
+
+        footer .copy { color: var(--dim); font-size: 0.78rem; }
+        footer .made-with { color: var(--dim); font-size: 0.72rem; margin-top: 0.4rem; letter-spacing: 0.08em; }
+        footer .made-with a { color: var(--cyan); text-decoration: none; }
 
         /* ======= RESPONSIVE ======= */
-        @media (max-width: 768px) {
-            header { min-height: auto; padding: 2rem 0; }
-            .header-text h1 { font-size: 2rem; }
-            nav ul { flex-wrap: wrap; justify-content: center; }
-            nav a { padding: 0.7rem 1rem; font-size: 0.85rem; }
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+        @media (max-width: 860px) {
+            .nav-inner { flex-wrap: wrap; padding: 8px 16px; }
+            nav ul a { padding: 8px 8px; font-size: 0.72rem; }
+            .timeline::after { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 52px; padding-right: 8px; }
             .timeline-item:nth-child(even) { left: 0; }
-            .timeline-item::after { left: 18px; }
+            .timeline-item::after { left: 13px !important; right: auto; }
             .projects-grid { grid-template-columns: 1fr; }
+            .mirafont-panel { padding: 1.8rem 1.4rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section - Miranet / Laputa Sky Theme -->
-    <header>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-brand" href="#top">miraNET</a>
+            <ul>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#skills">Competenze</a></li>
+                <li><a href="#experience">Esperienza</a></li>
+                <li><a href="#projects">Progetti</a></li>
+                <li><a href="#mirafont">miraFONT</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+            <div class="language-switch">
+                <button class="language-btn active" onclick="switchLanguage('it')">IT</button>
+                <button class="language-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="top">
         <div class="container">
             <div class="header-content">
                 <div class="miranet-brand">
-                    <span></span> Miranet <span></span>
+                    <span></span> miraNET <span></span>
                 </div>
                 <div class="profile-img" id="profileImg"><img src="avatar.png" alt="Umberto Meglio"></div>
                 <div class="header-text">
                     <h1>Umberto Meglio</h1>
+                    <p class="header-tagline">where data speaks C.</p>
                     <div class="title-row">
                         <span class="badge">Ingegnere delle Infrastrutture</span>
                         <span class="badge">Esperto in Virtualizzazione</span>
@@ -556,45 +826,32 @@
                         <span class="badge">Recensore per Gartner Peer Insight</span>
                     </div>
                 </div>
-                <div class="language-switch">
-                    <button class="language-btn active" onclick="switchLanguage('it')">IT</button>
-                    <button class="language-btn" onclick="switchLanguage('en')">EN</button>
-                </div>
             </div>
         </div>
     </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">Chi Sono</a></li>
-            <li><a href="#skills">Competenze</a></li>
-            <li><a href="#experience">Esperienza</a></li>
-            <li><a href="#projects">Progetti</a></li>
-            <li><a href="#contact">Contatti</a></li>
-        </ul>
-    </nav>
 
     <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-title">
+                <span class="kicker">// profilo</span>
                 <h2>Chi Sono</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p>Benvenuti nel mio spazio professionale. Sono un Ingegnere delle Infrastrutture con una passione per l'informatica che risale all'et&agrave; di 11 anni. La mia formazione accademica presso l'Universit&agrave; Federico II e la mia esperienza pratica mi hanno permesso di sviluppare competenze trasversali nel campo dell'informatica e delle infrastrutture.</p>
                     <p>Unisco le conoscenze tecniche di programmazione alla capacit&agrave; di analisi e progettazione delle infrastrutture. Sono particolarmente interessato alle tecnologie di virtualizzazione (VMware, Veeam, Proxmox), sicurezza informatica (Fortinet), intelligenza artificiale (OpenAI, Anthropic, NVIDIA) e all'analisi dei dati con soluzioni ETL, ambiti in cui ho maturato una significativa esperienza professionale.</p>
-                    <p>Dal 1998 ricopro il ruolo di CIO presso <a href="https://www.sipos.it/" target="_blank" style="color: var(--secondary-color); text-decoration: none; font-weight: 500;">Sipos Srl</a>, dove ho guidato la trasformazione digitale dell'azienda e implementato soluzioni innovative per ottimizzare i processi aziendali.</p>
+                    <p>Dal 1998 ricopro il ruolo di CIO presso <a href="https://www.sipos.it/" target="_blank">Sipos Srl</a>, dove ho guidato la trasformazione digitale dell'azienda e implementato soluzioni innovative per ottimizzare i processi aziendali.</p>
                     <p>Come membro della Gartner Peer Insight, fornisco recensioni e analisi per importanti player del settore come Fortinet, VMware e Veeam, contribuendo alla valutazione e all'evoluzione delle tecnologie emergenti.</p>
                     <p>Oltre all'informatica, nutro una profonda passione per la fisica e la matematica. Queste discipline non solo arricchiscono il mio approccio analitico ai problemi tecnici, ma rappresentano anche una fonte continua di ispirazione per le soluzioni innovative che sviluppo nel mio lavoro quotidiano.</p>
                 </div>
-                <div class="about-info">
-                    <div class="info-item"><strong>Nome:</strong> Umberto Meglio</div>
-                    <div class="info-item"><strong>Professione:</strong> Ingegnere delle Infrastrutture</div>
-                    <div class="info-item"><strong>Email:</strong> umberto.meglio@sipos.it</div>
-                    <div class="info-item"><strong>Formazione:</strong> Laurea in Ingegneria delle Infrastrutture, Federico II (1996)</div>
-                    <div class="info-item"><strong>Diplomi:</strong> Elettronica e Informatica (1992), Geometra (1997)</div>
+                <div class="about-info card">
+                    <div class="about-info-title">// dati</div>
+                    <div class="info-item"><strong>Nome</strong> Umberto Meglio</div>
+                    <div class="info-item"><strong>Professione</strong> Ingegnere delle Infrastrutture</div>
+                    <div class="info-item"><strong>Email</strong> umberto.meglio@sipos.it</div>
+                    <div class="info-item"><strong>Formazione</strong> Laurea in Ingegneria delle Infrastrutture, Federico II (1996)</div>
+                    <div class="info-item"><strong>Diplomi</strong> Elettronica e Informatica (1992), Geometra (1997)</div>
                 </div>
             </div>
         </div>
@@ -604,42 +861,43 @@
     <section id="skills">
         <div class="container">
             <div class="section-title">
+                <span class="kicker">// stack</span>
                 <h2>Competenze</h2>
             </div>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Programmazione</h3>
                     <div class="skill-item"><div class="skill-name"><span>Visual FoxPro</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Delphi</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>C++ / wxWidgets</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>ETL (Extract, Transform, Load)</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Infrastrutture e Virtualizzazione</h3>
                     <div class="skill-item"><div class="skill-name"><span>VMware</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Veeam</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Proxmox</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>QEMU</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Sicurezza Informatica</h3>
                     <div class="skill-item"><div class="skill-name"><span>Fortinet</span><span>92%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Network Security</span><span>88%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Analisi Vulnerabilit&agrave;</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Intelligenza Artificiale</h3>
                     <div class="skill-item"><div class="skill-name"><span>OpenAI</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Anthropic</span><span>82%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>NVIDIA AI</span><span>80%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div></div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Analisi Dati</h3>
                     <div class="skill-item"><div class="skill-name"><span>MonetDB</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>DWAVE (Quantum Computing)</span><span>80%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Processi ETL</span><span>88%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div></div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Capacit&agrave; Trasversali</h3>
                     <div class="skill-item"><div class="skill-name"><span>Analisi e Problem Solving</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Pensiero Creativo</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
@@ -653,46 +911,47 @@
     <section id="experience">
         <div class="container">
             <div class="section-title">
+                <span class="kicker">// percorso</span>
                 <h2>Esperienza</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>CIO di Sipos Srl</h3>
                         <span class="date">1998 - Attuale</span>
-                        <p>Come Chief Information Officer di <a href="https://www.sipos.it/" target="_blank" style="color: var(--secondary-color);">Sipos Srl</a>, sono responsabile della strategia IT complessiva dell'azienda, della gestione dell'infrastruttura tecnologica e dell'implementazione di soluzioni innovative per ottimizzare i processi aziendali e garantire la sicurezza dei dati.</p>
+                        <p>Come Chief Information Officer di <a href="https://www.sipos.it/" target="_blank">Sipos Srl</a>, sono responsabile della strategia IT complessiva dell'azienda, della gestione dell'infrastruttura tecnologica e dell'implementazione di soluzioni innovative per ottimizzare i processi aziendali e garantire la sicurezza dei dati.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>Recensore per Gartner Peer Insight</h3>
                         <span class="date">Attuale</span>
                         <p>Fornisco recensioni e analisi tecniche di prodotti per importanti player del settore come VMware, Fortinet e Veeam, contribuendo alla valutazione e all'evoluzione delle tecnologie emergenti nel campo della virtualizzazione, sicurezza informatica e backup.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>Specialista in Virtualizzazione e Sicurezza</h3>
                         <span class="date">2010 - Attuale</span>
                         <p>Progettazione e implementazione di ambienti virtualizzati complessi con VMware, Veeam e Proxmox. Implementazione di soluzioni di sicurezza Fortinet e configurazione di sistemi ETL per l'analisi dei dati. Ottimizzazione delle prestazioni e consulenza per la migrazione verso infrastrutture cloud.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>Consulente AI e Analisi Dati</h3>
                         <span class="date">2020 - Attuale</span>
                         <p>Implementazione di soluzioni basate su intelligenza artificiale utilizzando tecnologie OpenAI, Anthropic e NVIDIA. Progettazione di pipeline ETL per l'elaborazione di grandi volumi di dati e integrazione con sistemi di analisi avanzata.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>Sviluppatore Visual FoxPro</h3>
                         <span class="date">2000 - Attuale</span>
                         <p>Sviluppo di applicazioni gestionali utilizzando Visual FoxPro. Progettazione di database, interfacce utente e logiche di business per vari settori industriali. Implementazione di soluzioni personalizzate per l'analisi dei dati.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="timeline-content card">
                         <h3>Ingegnere delle Infrastrutture</h3>
                         <span class="date">1996 - 2000</span>
                         <p>Dopo la laurea presso l'Universit&agrave; Federico II, ho lavorato alla progettazione e al collaudo di infrastrutture, applicando le mie conoscenze informatiche per automatizzare e ottimizzare i processi di verifica e controllo.</p>
@@ -702,17 +961,38 @@
         </div>
     </section>
 
-    <!-- Projects Section - Real GitHub Projects -->
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-title">
+                <span class="kicker">// repository</span>
                 <h2>Progetti</h2>
             </div>
             <div class="projects-subsection">
                 <h3>&#x1F4BB; Progetti Open Source</h3>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card card">
+                    <div class="project-header">
+                        <h3>miraFONT</h3>
+                        <span class="project-type">Typeface &middot; CC0</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Il mio carattere tipografico originale: 21 tagli in 3 texture generati da una matrice di nodi 5&times;7, dal web ai display OLED su ESP32. Rilasciato in pubblico dominio. &Egrave; il font che stai leggendo su questa pagina.</p>
+                        <div class="project-tags">
+                            <span class="tag">Typography</span>
+                            <span class="tag">CC0</span>
+                            <span class="tag">ESP32 / OLED</span>
+                            <span class="tag">WOFF / TTF / OTF</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/umeglio/miraFONT" target="_blank">GitHub &rarr;</a>
+                            &nbsp;&nbsp;
+                            <a href="#mirafont">Scopri di pi&ugrave; &darr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card">
                     <div class="project-header">
                         <h3>FTP Sync Service</h3>
                         <span class="project-type">Servizio Windows &middot; C++</span>
@@ -732,7 +1012,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card card">
                     <div class="project-header">
                         <h3>PatternTriggerCommand</h3>
                         <span class="project-type">Servizio Windows &middot; C++</span>
@@ -750,7 +1030,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card card">
                     <div class="project-header">
                         <h3>decibel.js</h3>
                         <span class="project-type">Web App &middot; JavaScript</span>
@@ -767,7 +1047,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card card">
                     <div class="project-header">
                         <h3>TechDetectorPro</h3>
                         <span class="project-type">Estensione Chrome &middot; JavaScript</span>
@@ -790,7 +1070,7 @@
                 <h3>&#x1F3AF; Expertise Professionali</h3>
             </div>
             <div class="projects-grid">
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Sistema Avanzato di Analisi Dati</h3>
                         <span class="project-type">Expertise &middot; MonetDB</span>
@@ -805,7 +1085,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Infrastruttura Virtualizzata per Ambienti Critici</h3>
                         <span class="project-type">Expertise &middot; Virtualizzazione</span>
@@ -821,7 +1101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Implementazione Avanzata di Sicurezza Perimetrale</h3>
                         <span class="project-type">Expertise &middot; Fortinet</span>
@@ -836,7 +1116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Integrazione di Modelli AI in Sistemi Legacy</h3>
                         <span class="project-type">Expertise &middot; Intelligenza Artificiale</span>
@@ -851,7 +1131,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Sistema ETL per Integrazioni Dati Multipiattaforma</h3>
                         <span class="project-type">Expertise &middot; Data Engineering</span>
@@ -866,7 +1146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card expertise">
+                <div class="project-card expertise card">
                     <div class="project-header">
                         <h3>Sperimentazione con DWAVE per Ottimizzazione</h3>
                         <span class="project-type">Expertise &middot; Quantum Computing</span>
@@ -884,39 +1164,86 @@
         </div>
     </section>
 
+    <!-- miraFONT Section -->
+    <section id="mirafont">
+        <div class="container">
+            <div class="section-title">
+                <span class="kicker">// typeface</span>
+                <h2>miraFONT</h2>
+            </div>
+            <div class="mirafont-panel card">
+                <h3 class="mirafont-title">miraFONT</h3>
+                <p class="mirafont-claim">where data speaks C.</p>
+
+                <p class="desc">
+                    <b>IT</b> &mdash; miraFONT &egrave; il mio carattere tipografico originale: nasce da una matrice
+                    di nodi 5&times;7, senza outline di terze parti. 21 tagli in 3 texture (Dots, Linear, Spline),
+                    dal desktop al web fino ai display OLED su ESP32. Rilasciato in
+                    <b class="cc0">CC0 &mdash; pubblico dominio</b>: &egrave; di tutti.
+                </p>
+                <p class="desc en">
+                    <b>EN</b> &mdash; miraFONT is my original typeface, built from a 5&times;7 node matrix.
+                    21 cuts, 3 textures, desktop to ESP32 OLED. Released under
+                    <b class="cc0">CC0 &mdash; public domain</b>: it belongs to everyone.
+                </p>
+
+                <div class="mirafont-specimen">
+                    <div class="specimen-cell dots">
+                        <span class="label">Dots</span>
+                        <span class="sample">AaBb 0123 &#123;&#125;</span>
+                    </div>
+                    <div class="specimen-cell linear">
+                        <span class="label">Linear</span>
+                        <span class="sample">AaBb 0123 &#123;&#125;</span>
+                    </div>
+                    <div class="specimen-cell spline">
+                        <span class="label">Spline</span>
+                        <span class="sample">AaBb 0123 &#123;&#125;</span>
+                    </div>
+                </div>
+
+                <p class="mirafont-coming">
+                    &#9654; <b>In arrivo / Coming up</b> &mdash; il
+                    <a href="https://doi.org/10.5281/zenodo.19402571" target="_blank"><b>miraNET Digital Runtime</b></a>
+                    &egrave; interamente basato su miraFONT / is built on miraFONT.
+                </p>
+
+                <div class="mirafont-actions">
+                    <a class="btn-primary" href="https://umeglio.github.io/miraFONT/" target="_blank">Specimen + simulatore OLED</a>
+                    <a class="btn-ghost" href="https://github.com/umeglio/miraFONT" target="_blank">Download &middot; GitHub</a>
+                    <a href="https://doi.org/10.5281/zenodo.19402571" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19402571.svg" alt="DOI 10.5281/zenodo.19402571"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="section-title">
+                <span class="kicker">// ping</span>
                 <h2>Contatti</h2>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">&#x1F4E7;</div>
-                        <div class="contact-text"><h4>Email</h4><p>umberto.meglio@sipos.it</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#x1F4F1;</div>
-                        <div class="contact-text"><h4>Telefono</h4><p>+39 335 81 77 164</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#x1F4CD;</div>
-                        <div class="contact-text"><h4>Localit&agrave;</h4><p>Napoli, Italia</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#x1F4BB;</div>
-                        <div class="contact-text"><h4>GitHub</h4><p><a href="https://github.com/umeglio" target="_blank" style="color: var(--secondary-color); text-decoration: none;">github.com/umeglio</a></p></div>
-                    </div>
+            <div class="contact-grid">
+                <div class="contact-item card">
+                    <div class="contact-icon">&#x1F4E7;</div>
+                    <div class="contact-text"><h4>Email</h4><p><a href="mailto:umberto.meglio@sipos.it">umberto.meglio@sipos.it</a></p></div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group"><input type="text" class="form-control" placeholder="Nome" required></div>
-                        <div class="form-group"><input type="email" class="form-control" placeholder="Email" required></div>
-                        <div class="form-group"><input type="text" class="form-control" placeholder="Oggetto"></div>
-                        <div class="form-group"><textarea class="form-control" placeholder="Messaggio" required></textarea></div>
-                        <button type="submit" class="btn">Invia Messaggio</button>
-                    </form>
+                <div class="contact-item card">
+                    <div class="contact-icon">&#x1F4F1;</div>
+                    <div class="contact-text"><h4>Telefono</h4><p><a href="tel:+393358177164">+39 335 81 77 164</a></p></div>
+                </div>
+                <div class="contact-item card">
+                    <div class="contact-icon">&#x1F4CD;</div>
+                    <div class="contact-text"><h4>Localit&agrave;</h4><p>Napoli, Italia</p></div>
+                </div>
+                <div class="contact-item card">
+                    <div class="contact-icon">&#x1F4BB;</div>
+                    <div class="contact-text"><h4>GitHub</h4><p><a href="https://github.com/umeglio" target="_blank">github.com/umeglio</a></p></div>
+                </div>
+                <div class="contact-item card">
+                    <div class="contact-icon">&#x1F517;</div>
+                    <div class="contact-text"><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/in/umbertomeglio/" target="_blank">in/umbertomeglio</a></p></div>
                 </div>
             </div>
         </div>
@@ -926,32 +1253,16 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/umbertomeglio/" class="social-link" target="_blank">L</a>
-                <a href="https://github.com/umeglio" class="social-link" target="_blank">G</a>
+                <a href="https://www.linkedin.com/in/umbertomeglio/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/umeglio" class="social-link" target="_blank">GitHub</a>
+                <a href="https://umeglio.github.io/miraFONT/" class="social-link" target="_blank">miraFONT</a>
             </div>
-            <p>&copy; 2025 Umberto Meglio. Tutti i diritti riservati.</p>
+            <p class="copy">&copy; 2026 Umberto Meglio. Tutti i diritti riservati.</p>
+            <p class="made-with">Composto in <a href="https://umeglio.github.io/miraFONT/" target="_blank">miraFONT</a> &mdash; where data speaks C.</p>
         </div>
     </footer>
 
     <script>
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Grazie per il tuo messaggio! Ti risponderr&ograve; al pi&ugrave; presto.');
-            this.reset();
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                if (targetElement) {
-                    window.scrollTo({ top: targetElement.offsetTop - 50, behavior: 'smooth' });
-                }
-            });
-        });
-
         // Language toggle
         function switchLanguage(lang) {
             if (lang === 'en') {
