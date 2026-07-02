@@ -605,6 +605,65 @@
 
         @keyframes blink { 50% { opacity: 0; } }
 
+        /* ======= SECTION STRIPS / TERMINAL ======= */
+        .oled-section {
+            max-width: 460px;
+            margin: 18px auto 0;
+        }
+
+        .cursor.dim {
+            width: 0.5em;
+            height: 0.95em;
+            margin-left: 6px;
+            background: var(--dim);
+            box-shadow: none;
+            opacity: 0.8;
+        }
+
+        .terminal {
+            width: min(560px, 100%);
+            margin: 1.8rem auto 0;
+            text-align: left;
+            background: #010409;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(47, 208, 255, 0.08), inset 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .terminal-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: rgba(47, 208, 255, 0.05);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .tdot { width: 9px; height: 9px; border-radius: 50%; }
+        .tdot.r { background: #ff5f57; }
+        .tdot.y { background: #febc2e; }
+        .tdot.g { background: #28c840; }
+
+        .terminal-title {
+            margin-left: 8px;
+            font-size: 0.66rem;
+            letter-spacing: 0.14em;
+            color: var(--dim);
+            text-transform: uppercase;
+        }
+
+        .terminal-body {
+            padding: 12px 14px 14px;
+            font-size: 0.82rem;
+            min-height: 78px;
+            color: var(--text);
+        }
+
+        .tprompt { color: var(--green); }
+        #termOut { color: var(--dim); white-space: pre-wrap; }
+        .terminal .cursor { background: var(--cyan); box-shadow: 0 0 8px rgba(47, 208, 255, 0.6); }
+
         @media (prefers-reduced-motion: reduce) {
             .oled-track, .oled .led, .cursor,
             header::before, .profile-img { animation: none !important; }
@@ -909,6 +968,10 @@
                         <span class="badge">Specialista ETL e AI</span>
                         <span class="badge">Recensore per Gartner Peer Insight</span>
                     </div>
+                    <div class="terminal" aria-hidden="true">
+                        <div class="terminal-bar"><span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span><span class="terminal-title">umeglio@miranet &mdash; sh</span></div>
+                        <div class="terminal-body"><span class="tprompt">umeglio@miranet:~$ </span><span id="termCmd"></span><span class="cursor"></span><div id="termOut"></div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -918,8 +981,9 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// profilo</span>
+                <span class="kicker">// profilo <span class="cursor dim"></span></span>
                 <h2>Chi Sono</h2>
+                <div class="oled cyan oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">WHOAMI :: UMBERTO MEGLIO :: CIO @ SIPOS SRL SINCE 1998 :: ING. FEDERICO II 1996 :: NAPOLI IT ::  WHOAMI :: UMBERTO MEGLIO :: CIO @ SIPOS SRL SINCE 1998 :: ING. FEDERICO II 1996 :: NAPOLI IT ::  </span></span></div>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -945,8 +1009,9 @@
     <section id="skills">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// stack</span>
+                <span class="kicker">// stack <span class="cursor dim"></span></span>
                 <h2>Competenze</h2>
+                <div class="oled green oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">LOADING MODULES :: C++ VFP DELPHI :: VMWARE VEEAM PROXMOX QEMU :: FORTINET :: OPENAI ANTHROPIC NVIDIA :: ETL MONETDB DWAVE ::  LOADING MODULES :: C++ VFP DELPHI :: VMWARE VEEAM PROXMOX QEMU :: FORTINET :: OPENAI ANTHROPIC NVIDIA :: ETL MONETDB DWAVE ::  </span></span></div>
             </div>
             <div class="skills-container">
                 <div class="skill-category card">
@@ -995,8 +1060,9 @@
     <section id="experience">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// percorso</span>
+                <span class="kicker">// percorso <span class="cursor dim"></span></span>
                 <h2>Esperienza</h2>
+                <div class="oled amber oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">UPTIME 30 YEARS :: 1996 > 2026 :: INFRASTRUCTURE > VIRTUALIZATION > SECURITY > AI :: STATUS RUNNING ::  UPTIME 30 YEARS :: 1996 > 2026 :: INFRASTRUCTURE > VIRTUALIZATION > SECURITY > AI :: STATUS RUNNING ::  </span></span></div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
@@ -1049,8 +1115,9 @@
     <section id="projects">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// repository</span>
+                <span class="kicker">// repository <span class="cursor dim"></span></span>
                 <h2>Progetti</h2>
+                <div class="oled cyan oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">GIT STATUS :: 7 PUBLIC REPOS :: C C++ JAVASCRIPT TYPEFACE :: OPEN SOURCE :: PUSH ACCEPTED ::  GIT STATUS :: 7 PUBLIC REPOS :: C C++ JAVASCRIPT TYPEFACE :: OPEN SOURCE :: PUSH ACCEPTED ::  </span></span></div>
             </div>
             <div class="projects-subsection">
                 <h3>&#x1F4BB; Progetti Open Source</h3>
@@ -1291,8 +1358,9 @@
     <section id="mirafont">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// typeface</span>
+                <span class="kicker">// typeface <span class="cursor dim"></span></span>
                 <h2>miraFONT</h2>
+                <div class="oled amber oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">RENDER TEST :: ABCDEFGHIJKLMNOPQRSTUVWXYZ :: 0123456789 :: DOTS LINEAR SPLINE :: 5X7 NODE MATRIX ::  RENDER TEST :: ABCDEFGHIJKLMNOPQRSTUVWXYZ :: 0123456789 :: DOTS LINEAR SPLINE :: 5X7 NODE MATRIX ::  </span></span></div>
             </div>
             <div class="mirafont-panel card">
                 <h3 class="mirafont-title">miraFONT</h3>
@@ -1344,8 +1412,9 @@
     <section id="contact">
         <div class="container">
             <div class="section-title">
-                <span class="kicker">// ping</span>
+                <span class="kicker">// ping <span class="cursor dim"></span></span>
                 <h2>Contatti</h2>
+                <div class="oled green oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">PING SIPOS.IT :: 64 BYTES FROM NAPOLI :: TTL=64 TIME=1.2MS :: MAIL TEL GITHUB LINKEDIN ONLINE ::  PING SIPOS.IT :: 64 BYTES FROM NAPOLI :: TTL=64 TIME=1.2MS :: MAIL TEL GITHUB LINKEDIN ONLINE ::  </span></span></div>
             </div>
             <div class="contact-grid">
                 <div class="contact-item card">
@@ -1386,6 +1455,48 @@
     </footer>
 
     <script>
+
+        // CLI terminal typewriter
+        (function () {
+            var cmds = [
+                ['whoami', 'umberto.meglio :: CIO @ sipos.it'],
+                ['uname -a', 'miraNET 5.7 node-matrix #21 SMP x86_64'],
+                ['ls ~/projects', 'miraFONT  dev-id  Monet_OleDB  ftp-sync-service  PatternTriggerCommand  decibel.js  TechDetectorPro'],
+                ['cat motto.txt', 'where data speaks C.'],
+                ['systemctl status mirafont', '\u25CF active (running) :: 21 cuts loaded :: CC0 public domain']
+            ];
+            var cmdEl = document.getElementById('termCmd');
+            var outEl = document.getElementById('termOut');
+            if (!cmdEl || !outEl) return;
+            if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                cmdEl.textContent = cmds[0][0];
+                outEl.textContent = cmds[0][1];
+                return;
+            }
+            var i = 0;
+            function type(s, j, done) {
+                if (j <= s.length) {
+                    cmdEl.textContent = s.slice(0, j);
+                    setTimeout(function () { type(s, j + 1, done); }, 55 + Math.random() * 70);
+                } else {
+                    setTimeout(done, 400);
+                }
+            }
+            function run() {
+                var c = cmds[i % cmds.length];
+                i++;
+                outEl.textContent = '';
+                type(c[0], 0, function () {
+                    outEl.textContent = c[1];
+                    setTimeout(function () {
+                        cmdEl.textContent = '';
+                        setTimeout(run, 700);
+                    }, 4500);
+                });
+            }
+            run();
+        })();
+
         // Language toggle
         function switchLanguage(lang) {
             if (lang === 'en') {
