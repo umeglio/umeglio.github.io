@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umberto Meglio - Infrastructure Engineer expert in programming, cybersecurity and AI</title>
-    <meta name="description" content="Umberto Meglio — Infrastructure Engineer, CIO at Sipos Srl. Virtualization, cybersecurity, AI, ETL and miraFONT.">
+    <meta name="description" content="Umberto Meglio &mdash; Infrastructure Engineer, CIO at Sipos Srl. Virtualization, cyber security, AI, ETL, miraFONT and the miraIRIDE and miraNET publications.">
     <link rel="stylesheet" href="https://umeglio.github.io/miraFONT/fonts/miraFONT.css">
     <style>
         :root {
@@ -836,6 +836,187 @@
 
         .mirafont-actions img { height: 22px; display: block; }
 
+
+        /* ======= RESEARCH / PUBLICATIONS ======= */
+        #research {
+            background:
+                radial-gradient(ellipse 70% 80% at 50% 0%, rgba(10, 45, 62, 0.45), transparent),
+                var(--bg);
+        }
+
+        .pub-intro {
+            max-width: 820px;
+            margin: 0 auto 1.4rem;
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        .pub-orcid {
+            max-width: 820px;
+            margin: 0 auto 2.4rem;
+            padding: 0.9rem 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 6px 22px;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .pub-orcid strong {
+            color: var(--green);
+            font-weight: 400;
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-right: 6px;
+        }
+
+        .pub-orcid a { color: var(--cyan); text-decoration: none; }
+        .pub-orcid a:hover { text-shadow: 0 0 10px rgba(47, 208, 255, 0.6); }
+
+        .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 22px;
+        }
+
+        .pub-card {
+            padding: 1.8rem 1.7rem;
+            overflow: hidden;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pub-kind {
+            display: block;
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 6px;
+        }
+
+        .pub-card h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--cyan);
+            letter-spacing: 0.04em;
+            text-shadow: 0 0 14px rgba(47, 208, 255, 0.32);
+        }
+
+        .pub-sub {
+            color: var(--amber);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 1.1rem;
+        }
+
+        .pub-card p.pub-text { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.9rem; }
+        .pub-card p.pub-text b { color: var(--cyan-soft); font-weight: 400; }
+
+        .pub-card:hover .oled-track { animation-duration: 13s; }
+
+        .pub-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 1.3rem 0 1.1rem;
+        }
+
+        .metric {
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 0.7rem 0.6rem;
+            background: rgba(3, 6, 15, 0.6);
+            text-align: center;
+        }
+
+        .metric .value {
+            display: block;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--green);
+            text-shadow: 0 0 12px rgba(125, 255, 176, 0.3);
+        }
+
+        .metric .unit {
+            display: block;
+            font-size: 0.64rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--dim);
+            line-height: 1.6;
+            margin-top: 3px;
+        }
+
+        .pub-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px 18px;
+            border-top: 1px solid var(--line);
+            padding-top: 1.1rem;
+            margin-top: auto;
+        }
+
+        .pub-meta div { font-size: 0.8rem; color: var(--muted); }
+
+        .pub-meta strong {
+            display: block;
+            color: var(--green);
+            font-weight: 400;
+            font-size: 0.66rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .pub-meta a { color: var(--cyan); text-decoration: none; word-break: break-word; }
+        .pub-meta a:hover { text-shadow: 0 0 10px rgba(47, 208, 255, 0.6); }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px 18px;
+            margin-top: 1.2rem;
+        }
+
+        .pub-links a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+        }
+
+        .pub-links a:hover { text-shadow: 0 0 10px rgba(47, 208, 255, 0.7); }
+        .pub-links img { height: 20px; display: block; }
+
+        .pub-thread {
+            max-width: 880px;
+            margin: 2.4rem auto 0;
+            padding: 1.4rem 1.6rem;
+            border: 1px dashed rgba(125, 255, 176, 0.32);
+            border-radius: 11px;
+            background: rgba(3, 6, 15, 0.5);
+        }
+
+        .pub-thread h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--green);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.6rem;
+        }
+
+        .pub-thread p { font-size: 0.88rem; color: var(--muted); }
+        .pub-thread b { color: var(--cyan-soft); font-weight: 400; }
+
         /* ======= CONTACT ======= */
         .contact-grid {
             display: grid;
@@ -890,7 +1071,7 @@
             background: var(--panel-2);
         }
 
-        .social-links { margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 12px; }
+        .social-links { margin-bottom: 1.2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
         .social-link {
             display: inline-flex; align-items: center; justify-content: center;
@@ -923,9 +1104,58 @@
             .timeline-item:nth-child(even) { left: 0; }
             .timeline-item::after { left: 13px !important; right: auto; }
             .projects-grid { grid-template-columns: 1fr; }
+            .pub-grid { grid-template-columns: 1fr; }
+            .pub-card { padding: 1.5rem 1.2rem; }
             .mirafont-panel { padding: 1.8rem 1.4rem; }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://umeglio.github.io/#umberto-meglio",
+          "name": "Umberto Meglio",
+          "url": "https://umeglio.github.io/",
+          "identifier": "https://orcid.org/0009-0006-8449-6497",
+          "jobTitle": "Chief Information Officer",
+          "worksFor": { "@type": "Organization", "name": "Sipos Srl", "url": "https://www.sipos.it/" },
+          "sameAs": [
+            "https://orcid.org/0009-0006-8449-6497",
+            "https://github.com/umeglio",
+            "https://www.linkedin.com/in/umbertomeglio/"
+          ]
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "miraIRIDE: a Covered Progressive Index at Sixteen Bytes per Key",
+          "author": { "@id": "https://umeglio.github.io/#umberto-meglio" },
+          "datePublished": "2026-08-19",
+          "inLanguage": "en",
+          "identifier": "https://doi.org/10.5281/zenodo.22012324",
+          "url": "https://doi.org/10.5281/zenodo.22012324",
+          "sameAs": "https://openalex.org/works/W7203674025",
+          "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "publisher": { "@type": "Organization", "name": "Zenodo" },
+          "keywords": "covered index, progressive index, database index, exact-match, key-value store, bit-packed data structures, cache-conscious data structures, NUMA, prefetching, C++17"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "miraNET: a native Digital Runtime for autonomous business data operations",
+          "author": { "@id": "https://umeglio.github.io/#umberto-meglio" },
+          "datePublished": "2026-04-03",
+          "inLanguage": "en",
+          "programmingLanguage": "C++17",
+          "identifier": "https://doi.org/10.5281/zenodo.19402571",
+          "url": "https://doi.org/10.5281/zenodo.19402571",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "publisher": { "@type": "Organization", "name": "Zenodo" },
+          "keywords": "Digital Runtime, native microservices, hot-reload, IOCP, MonetDB, C++17, zero-downtime deployment, event-driven architecture"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -937,6 +1167,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Publications</a></li>
                 <li><a href="#mirafont">miraFONT</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -967,6 +1198,7 @@
                         <span class="badge">Programming</span>
                         <span class="badge">ETL &amp; AI Specialist</span>
                         <span class="badge">Gartner Peer Insight Reviewer</span>
+                        <span class="badge">Independent Researcher</span>
                     </div>
                     <div class="terminal" aria-hidden="true">
                         <div class="terminal-bar"><span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span><span class="terminal-title">umeglio@miranet &mdash; sh</span></div>
@@ -1357,6 +1589,97 @@
     </section>
 
     <!-- miraFONT Section -->
+    <!-- Publications Section -->
+    <section id="research">
+        <div class="container">
+            <div class="section-title">
+                <span class="kicker">// papers <span class="cursor dim"></span></span>
+                <h2>Publications</h2>
+                <div class="oled green oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  </span></span></div>
+            </div>
+            <p class="pub-intro">What I build does not always stay inside the code. Two works are deposited on Zenodo with a citable DOI, an open license and repeatable measurements: an engineering idea is worth exactly as much as the proof somebody else can reproduce.</p>
+            <div class="pub-orcid card">
+                <span><strong>ORCID</strong><a href="https://orcid.org/0009-0006-8449-6497" target="_blank">0009-0006-8449-6497</a></span>
+                <span><strong>Repository</strong>Zenodo &middot; CERN</span>
+                <span><strong>Access</strong>Open</span>
+            </div>
+            <div class="pub-grid">
+                <article class="pub-card card">
+                    <span class="pub-kind">Article &middot; 19 August 2026 &middot; v2</span>
+                    <h3>miraIRIDE</h3>
+                    <p class="pub-sub">a Covered Progressive Index at Sixteen Bytes per Key</p>
+                    <div class="oled green"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  </span></span></div>
+                    <p class="pub-text">An index for immutable data that answers exact lookups <b>while it is still being built</b>. Every key is verified down to the byte and the whole structure costs 16.3 bytes per key: less than half of a state-of-the-art hash map.</p>
+                    <p class="pub-text">Version 2 adds entropic collective phases: ingestion generates its own parallelism &mdash; zero atomics per record, one barrier per window &mdash; and the same primitive also serves queries. On the 2012 reference iron (2&times; Xeon E5-2643 v2) write throughput reaches 46&ndash;54 Mkeys/s while remaining queryable; beyond twelve cores what stops the run is no longer the software but the DDR3 bandwidth wall.</p>
+                    <p class="pub-text">The comparison is a tribunal on a single binary: RB-tree, unordered_map, ISAM, sharded hash, serial hash and a production B-tree, all sharing one generator, one seed and one reference checksum. Against that B-tree: <b>43&times;</b> ingestion, <b>18&times;</b> lookup, <b>3.2&times;</b> less memory. The adversarial ledger holds 27 predictions registered before the runs: 14 confirmed and 10 falsified, kept on record because every falsification carried its own diagnosis.</p>
+                    <div class="pub-metrics">
+                            <div class="metric"><span class="value">16.3</span><span class="unit">bytes per key</span></div>
+                            <div class="metric"><span class="value">20.2 ns</span><span class="unit">per collective lookup</span></div>
+                            <div class="metric"><span class="value">53.8</span><span class="unit">Mkeys/s write peak</span></div>
+                            <div class="metric"><span class="value">0</span><span class="unit">violations over 1.2 M</span></div>
+                    </div>
+                        <div class="project-tags">
+                            <span class="tag">Covered index</span>
+                            <span class="tag">C++17</span>
+                            <span class="tag">SWAR / branchless</span>
+                            <span class="tag">Cache-conscious</span>
+                            <span class="tag">NUMA</span>
+                            <span class="tag">Amdahl</span>
+                        </div>
+                    <div class="pub-meta">
+                        <div><strong>Author</strong>Umberto Meglio</div>
+                        <div><strong>Type</strong>Journal article</div>
+                        <div><strong>License</strong>CC BY-NC-ND 4.0</div>
+                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.22012324" target="_blank">10.5281/zenodo.22012324</a></div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.5281/zenodo.22012324" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22012324.svg" alt="DOI 10.5281/zenodo.22012324"></a>
+                        <a href="https://zenodo.org/records/22012324" target="_blank">Zenodo &rarr;</a>
+                        <a href="https://researchbriefs.org/works/01a01b2f-e68d-7212-9908-5697b005ba28" target="_blank">Research Briefs &rarr;</a>
+                        <a href="https://openalex.org/works/W7203674025" target="_blank">OpenAlex &rarr;</a>
+                    </div>
+                </article>
+                <article class="pub-card card">
+                    <span class="pub-kind">Software &middot; 3 April 2026 &middot; v1</span>
+                    <h3>miraNET</h3>
+                    <p class="pub-sub">a native Digital Runtime for autonomous business data operations</p>
+                    <div class="oled cyan"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  </span></span></div>
+                    <p class="pub-text">A self-contained native platform: it receives data through a web dispatcher and processes it entirely in compiled C++. <b>No interpreters, no containers, no external dependencies.</b></p>
+                    <p class="pub-text">It compiles its own microservices at runtime, versions them automatically, rolls back on failure and monitors itself through a built-in storage engine. The database connection pool is shared and centrally managed, I/O is event-driven on IOCP, and new business logic can go from a natural-language prompt to a trained AI agent without human intervention.</p>
+                    <p class="pub-text">Everything runs in a <b>single process</b>: that is the choice that makes the rest possible &mdash; zero-downtime hot-reload, no network hop between services, one surface to watch.</p>
+                    <div class="pub-metrics">
+                            <div class="metric"><span class="value">1</span><span class="unit">process, that is all</span></div>
+                            <div class="metric"><span class="value">0</span><span class="unit">containers or interpreters</span></div>
+                            <div class="metric"><span class="value">C++17</span><span class="unit">natively compiled</span></div>
+                            <div class="metric"><span class="value">IOCP</span><span class="unit">event-driven I/O</span></div>
+                    </div>
+                        <div class="project-tags">
+                            <span class="tag">Digital Runtime</span>
+                            <span class="tag">Native microservices</span>
+                            <span class="tag">Hot-reload</span>
+                            <span class="tag">IOCP</span>
+                            <span class="tag">MonetDB</span>
+                            <span class="tag">Zero downtime</span>
+                        </div>
+                    <div class="pub-meta">
+                        <div><strong>Author</strong>Umberto Meglio</div>
+                        <div><strong>Type</strong>Software</div>
+                        <div><strong>License</strong>CC BY 4.0</div>
+                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.19402571" target="_blank">10.5281/zenodo.19402571</a></div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.5281/zenodo.19402571" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19402571.svg" alt="DOI 10.5281/zenodo.19402571"></a>
+                        <a href="https://zenodo.org/records/19402571" target="_blank">Zenodo &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            <div class="pub-thread">
+                <h4>&#x1F517; How they hold together</h4>
+                <p><b>miraNET</b> is the runtime: a single native process that receives, compiles and serves. <b>miraIRIDE</b> is the index living inside that runtime, giving it exact lookup at 16.3 bytes per key. <b>miraFONT</b> is the alphabet both of them show themselves in, from OLED displays to this page. Three pieces, one idea: bring the data as close to the metal as possible, then let it speak.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="mirafont">
         <div class="container">
             <div class="section-title">
@@ -1436,6 +1759,10 @@
                     <div class="contact-text"><h4>GitHub</h4><p><a href="https://github.com/umeglio" target="_blank">github.com/umeglio</a></p></div>
                 </div>
                 <div class="contact-item card">
+                    <div class="contact-icon">&#x1F52C;</div>
+                    <div class="contact-text"><h4>ORCID</h4><p><a href="https://orcid.org/0009-0006-8449-6497" target="_blank">0009-0006-8449-6497</a></p></div>
+                </div>
+                <div class="contact-item card">
                     <div class="contact-icon">&#x1F517;</div>
                     <div class="contact-text"><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/in/umbertomeglio/" target="_blank">in/umbertomeglio</a></p></div>
                 </div>
@@ -1450,6 +1777,7 @@
                 <a href="https://www.linkedin.com/in/umbertomeglio/" class="social-link" target="_blank">LinkedIn</a>
                 <a href="https://github.com/umeglio" class="social-link" target="_blank">GitHub</a>
                 <a href="https://umeglio.github.io/miraFONT/" class="social-link" target="_blank">miraFONT</a>
+                <a href="https://orcid.org/0009-0006-8449-6497" class="social-link" target="_blank">ORCID</a>
             </div>
             <p class="copy">&copy; 2026 Umberto Meglio. All rights reserved.</p>
             <p class="made-with">Set in <a href="https://umeglio.github.io/miraFONT/" target="_blank">miraFONT</a> &mdash; where data speaks C.</p>
@@ -1464,6 +1792,7 @@
                 ['whoami', 'umberto.meglio :: CIO @ sipos.it'],
                 ['uname -a', 'miraNET 5.7 node-matrix #21 SMP x86_64'],
                 ['ls ~/projects', 'miraFONT  dev-id  Monet_OleDB  ftp-sync-service  PatternTriggerCommand  decibel.js  TechDetectorPro'],
+                ['ls ~/papers', 'miraIRIDE.pdf  miraNET.pdf :: 2 doi on zenodo :: orcid 0009-0006-8449-6497'],
                 ['cat motto.txt', 'where data speaks C.'],
                 ['systemctl status mirafont', '\u25CF active (running) :: 21 cuts loaded :: CC0 public domain']
             ];
