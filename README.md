@@ -13,6 +13,7 @@ Questo repository contiene il codice sorgente del mio sito web personale e profe
 - [Installazione e Configurazione](#installazione-e-configurazione)
 - [Utilizzo](#utilizzo)
 - [Contributi](#contributi)
+- [Pubblicazioni](#pubblicazioni)
 - [Contatti](#contatti)
 
 ## Panoramica
@@ -39,7 +40,9 @@ Il sito è organizzato nelle seguenti sezioni:
 3. **Competenze**: Visualizzazione delle competenze tecniche con barre di progresso
 4. **Esperienza**: Timeline delle esperienze professionali
 5. **Progetti**: Showcase dei principali progetti realizzati
-6. **Contatti**: Informazioni di contatto e modulo per comunicazioni
+6. **Pubblicazioni**: I lavori depositati su Zenodo con DOI citabile
+7. **miraFONT**: Il carattere tipografico originale che compone il sito
+8. **Contatti**: Informazioni di contatto e modulo per comunicazioni
 
 ## Caratteristiche
 
@@ -67,6 +70,17 @@ Per modifiche locali e sviluppo, consulta la [Guida di Utilizzo](docs/it/UTILIZZ
 ## Contributi
 
 I contributi sono benvenuti! Per dettagli, consulta [CONTRIBUIRE.md](docs/it/CONTRIBUIRE.md).
+
+## Pubblicazioni
+
+I due lavori presentati nella sezione *Pubblicazioni* del sito, entrambi depositati su Zenodo e collegati al mio profilo [ORCID 0009-0006-8449-6497](https://orcid.org/0009-0006-8449-6497):
+
+| Lavoro | Tipo | Data | DOI |
+| --- | --- | --- | --- |
+| **miraIRIDE** — *a Covered Progressive Index at Sixteen Bytes per Key* | Articolo | 19/08/2026 | [10.5281/zenodo.22012324](https://doi.org/10.5281/zenodo.22012324) |
+| **miraNET** — *a native Digital Runtime for autonomous business data operations* | Software | 03/04/2026 | [10.5281/zenodo.19402571](https://doi.org/10.5281/zenodo.19402571) |
+
+Schede esterne di miraIRIDE: [Research Briefs](https://researchbriefs.org/works/01a01b2f-e68d-7212-9908-5697b005ba28) &middot; [OpenAlex](https://openalex.org/works/W7203674025).
 
 ## Contatti
 
