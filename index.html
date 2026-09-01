@@ -103,6 +103,37 @@
             text-shadow: 0 0 10px rgba(47, 208, 255, 0.6);
         }
 
+        nav ul a.nav-featured {
+            color: var(--green);
+            border: 1px solid rgba(125, 255, 176, 0.35);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 0 5px;
+            background: rgba(125, 255, 176, 0.07);
+            text-shadow: 0 0 10px rgba(125, 255, 176, 0.45);
+            transition: color 0.2s, border-color 0.25s, background 0.25s, text-shadow 0.2s;
+        }
+
+        nav ul a.nav-featured::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: 0.15em;
+            background: var(--green);
+            box-shadow: 0 0 8px var(--green);
+            animation: ledPulse 2.6s ease-in-out infinite;
+        }
+
+        nav ul a.nav-featured:hover {
+            color: var(--green);
+            border-color: var(--green);
+            background: rgba(125, 255, 176, 0.14);
+            text-shadow: 0 0 14px rgba(125, 255, 176, 0.85);
+        }
+
         .language-switch { display: flex; gap: 6px; }
 
         .language-btn {
@@ -262,8 +293,26 @@
             box-shadow: 0 4px 18px rgba(47, 208, 255, 0.25);
         }
 
+        a.badge {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--green);
+            background: rgba(125, 255, 176, 0.08);
+            border-color: rgba(125, 255, 176, 0.35);
+        }
+
+        a.badge:hover {
+            background: rgba(125, 255, 176, 0.16);
+            border-color: var(--green);
+            color: var(--green);
+            box-shadow: 0 4px 18px rgba(125, 255, 176, 0.22);
+        }
+
         /* ======= SECTIONS ======= */
         section { padding: 4.5rem 0; border-bottom: 1px solid rgba(47, 208, 255, 0.07); }
+
+        /* keep anchored sections clear of the sticky nav */
+        section[id], header[id] { scroll-margin-top: 68px; }
 
         .section-title { text-align: center; margin-bottom: 3rem; }
 
@@ -1103,6 +1152,7 @@
             .timeline-item { width: 100%; padding-left: 52px; padding-right: 8px; }
             .timeline-item:nth-child(even) { left: 0; }
             .timeline-item::after { left: 13px !important; right: auto; }
+            section[id], header[id] { scroll-margin-top: 195px; }
             .projects-grid { grid-template-columns: 1fr; }
             .pub-grid { grid-template-columns: 1fr; }
             .pub-card { padding: 1.5rem 1.2rem; }
@@ -1164,10 +1214,10 @@
             <a class="nav-brand" href="#top">miraNET</a>
             <ul>
                 <li><a href="#about">Chi Sono</a></li>
+                <li><a class="nav-featured" href="#research">Pubblicazioni</a></li>
                 <li><a href="#skills">Competenze</a></li>
                 <li><a href="#experience">Esperienza</a></li>
                 <li><a href="#projects">Progetti</a></li>
-                <li><a href="#research">Pubblicazioni</a></li>
                 <li><a href="#mirafont">miraFONT</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
@@ -1198,7 +1248,7 @@
                         <span class="badge">Programmazione</span>
                         <span class="badge">Specialista ETL e AI</span>
                         <span class="badge">Recensore per Gartner Peer Insight</span>
-                        <span class="badge">Ricercatore indipendente</span>
+                        <a class="badge" href="#research">Ricercatore indipendente &darr;</a>
                     </div>
                     <div class="terminal" aria-hidden="true">
                         <div class="terminal-bar"><span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span><span class="terminal-title">umeglio@miranet &mdash; sh</span></div>
@@ -1233,6 +1283,97 @@
                     <div class="info-item"><strong>Formazione</strong> Laurea in Ingegneria delle Infrastrutture, Federico II (1996)</div>
                     <div class="info-item"><strong>Diplomi</strong> Elettronica e Informatica (1992), Geometra (1997)</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="research">
+        <div class="container">
+            <div class="section-title">
+                <span class="kicker">// papers <span class="cursor dim"></span></span>
+                <h2>Pubblicazioni</h2>
+                <div class="oled amber oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  </span></span></div>
+            </div>
+            <p class="pub-intro">Quello che costruisco non resta sempre dentro il codice. Due lavori sono depositati su Zenodo con DOI citabile, licenza aperta e misure rifacibili: perch&eacute; un&rsquo;idea di ingegneria vale esattamente quanto la prova che qualcun altro pu&ograve; ripetere.</p>
+            <div class="pub-orcid card">
+                <span><strong>ORCID</strong><a href="https://orcid.org/0009-0006-8449-6497" target="_blank">0009-0006-8449-6497</a></span>
+                <span><strong>Deposito</strong>Zenodo &middot; CERN</span>
+                <span><strong>Accesso</strong>Aperto</span>
+            </div>
+            <div class="pub-grid">
+                <article class="pub-card card">
+                    <span class="pub-kind">Articolo &middot; 19 agosto 2026 &middot; v2</span>
+                    <h3>miraIRIDE</h3>
+                    <p class="pub-sub">a Covered Progressive Index at Sixteen Bytes per Key</p>
+                    <div class="oled green"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  </span></span></div>
+                    <p class="pub-text">Un indice per dati immutabili che risponde alle ricerche esatte <b>mentre si sta ancora costruendo</b>. Ogni chiave &egrave; verificata byte per byte e l&rsquo;intera struttura costa 16,3 byte per chiave: meno della met&agrave; di una hash map allo stato dell&rsquo;arte.</p>
+                    <p class="pub-text">La seconda versione aggiunge le fasi collettive entropiche: l&rsquo;ingestione genera da s&eacute; il proprio parallelismo &mdash; nessuna operazione atomica per record, una sola barriera per finestra &mdash; e la stessa primitiva serve anche le interrogazioni. Sul ferro di riferimento del 2012 (2&times; Xeon E5-2643 v2) la scrittura arriva a 46&ndash;54 Mkeys/s restando interrogabile; oltre i dodici core a fermare la corsa non &egrave; pi&ugrave; il software ma la banda della DDR3.</p>
+                    <p class="pub-text">Il confronto &egrave; un tribunale su un solo binario: RB-tree, unordered_map, ISAM, hash sharded, hash seriale e un B-tree di produzione, tutti con lo stesso generatore, lo stesso seme e lo stesso checksum di riferimento. Contro quel B-tree: <b>43&times;</b> in ingestione, <b>18&times;</b> in lookup, <b>3,2&times;</b> di memoria in meno. Il registro avversariale conta 27 predizioni depositate prima dei test: 14 confermate e 10 falsificate, tenute agli atti perch&eacute; ogni smentita si portava dietro la sua diagnosi.</p>
+                    <div class="pub-metrics">
+                            <div class="metric"><span class="value">16,3</span><span class="unit">byte per chiave</span></div>
+                            <div class="metric"><span class="value">20,2 ns</span><span class="unit">per lookup collettivo</span></div>
+                            <div class="metric"><span class="value">53,8</span><span class="unit">Mkeys/s in scrittura</span></div>
+                            <div class="metric"><span class="value">0</span><span class="unit">violazioni su 1,2 M</span></div>
+                    </div>
+                        <div class="project-tags">
+                            <span class="tag">Indice covered</span>
+                            <span class="tag">C++17</span>
+                            <span class="tag">SWAR / branchless</span>
+                            <span class="tag">Cache-conscious</span>
+                            <span class="tag">NUMA</span>
+                            <span class="tag">Amdahl</span>
+                        </div>
+                    <div class="pub-meta">
+                        <div><strong>Autore</strong>Umberto Meglio</div>
+                        <div><strong>Tipo</strong>Articolo scientifico</div>
+                        <div><strong>Licenza</strong>CC BY-NC-ND 4.0</div>
+                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.22012324" target="_blank">10.5281/zenodo.22012324</a></div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.5281/zenodo.22012324" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22012324.svg" alt="DOI 10.5281/zenodo.22012324"></a>
+                        <a href="https://zenodo.org/records/22012324" target="_blank">Zenodo &rarr;</a>
+                        <a href="https://researchbriefs.org/works/01a01b2f-e68d-7212-9908-5697b005ba28" target="_blank">Research Briefs &rarr;</a>
+                        <a href="https://openalex.org/works/W7203674025" target="_blank">OpenAlex &rarr;</a>
+                    </div>
+                </article>
+                <article class="pub-card card">
+                    <span class="pub-kind">Software &middot; 3 aprile 2026 &middot; v1</span>
+                    <h3>miraNET</h3>
+                    <p class="pub-sub">a native Digital Runtime for autonomous business data operations</p>
+                    <div class="oled cyan"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  </span></span></div>
+                    <p class="pub-text">Una piattaforma nativa e autosufficiente: riceve i dati da un dispatcher web e li elabora interamente in C++ compilato. <b>Niente interpreti, niente container, nessuna dipendenza esterna.</b></p>
+                    <p class="pub-text">Compila da s&eacute; i propri microservizi a runtime, li versiona, torna indietro da sola quando un rilascio fallisce e si osserva attraverso un motore di storage interno. Il pool di connessioni al database &egrave; condiviso e governato al centro, l&rsquo;I/O &egrave; event-driven su IOCP, e una nuova logica di business pu&ograve; nascere da un prompt in linguaggio naturale affidato a un agente addestrato, senza intervento umano.</p>
+                    <p class="pub-text">Tutto gira in un <b>singolo processo</b>: &egrave; la scelta che rende possibile il resto &mdash; hot-reload a downtime zero, nessun salto di rete tra i servizi, una sola superficie da sorvegliare.</p>
+                    <div class="pub-metrics">
+                            <div class="metric"><span class="value">1</span><span class="unit">processo, tutto qui</span></div>
+                            <div class="metric"><span class="value">0</span><span class="unit">container o interpreti</span></div>
+                            <div class="metric"><span class="value">C++17</span><span class="unit">compilato nativo</span></div>
+                            <div class="metric"><span class="value">IOCP</span><span class="unit">I/O event-driven</span></div>
+                    </div>
+                        <div class="project-tags">
+                            <span class="tag">Digital Runtime</span>
+                            <span class="tag">Microservizi nativi</span>
+                            <span class="tag">Hot-reload</span>
+                            <span class="tag">IOCP</span>
+                            <span class="tag">MonetDB</span>
+                            <span class="tag">Zero downtime</span>
+                        </div>
+                    <div class="pub-meta">
+                        <div><strong>Autore</strong>Umberto Meglio</div>
+                        <div><strong>Tipo</strong>Software</div>
+                        <div><strong>Licenza</strong>CC BY 4.0</div>
+                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.19402571" target="_blank">10.5281/zenodo.19402571</a></div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.5281/zenodo.19402571" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19402571.svg" alt="DOI 10.5281/zenodo.19402571"></a>
+                        <a href="https://zenodo.org/records/19402571" target="_blank">Zenodo &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            <div class="pub-thread">
+                <h4>&#x1F517; Come si tengono insieme</h4>
+                <p><b>miraNET</b> &egrave; il runtime: un solo processo nativo che riceve, compila e serve. <b>miraIRIDE</b> &egrave; l&rsquo;indice che vive dentro quel runtime e gli d&agrave; la ricerca esatta a 16,3 byte per chiave. <b>miraFONT</b> &egrave; l&rsquo;alfabeto con cui entrambi si mostrano, dai display OLED a questa pagina. Tre pezzi, una sola idea: portare il dato il pi&ugrave; vicino possibile al metallo e poi lasciarlo parlare.</p>
             </div>
         </div>
     </section>
@@ -1589,97 +1730,6 @@
     </section>
 
     <!-- miraFONT Section -->
-    <!-- Publications Section -->
-    <section id="research">
-        <div class="container">
-            <div class="section-title">
-                <span class="kicker">// papers <span class="cursor dim"></span></span>
-                <h2>Pubblicazioni</h2>
-                <div class="oled green oled-section"><span class="led"></span><span class="oled-view"><span class="oled-track">ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  ORCID 0009-0006-8449-6497 :: 2 WORKS DEPOSITED :: ZENODO CERN :: OPEN ACCESS :: DOI CITABLE :: PEER READABLE ::  </span></span></div>
-            </div>
-            <p class="pub-intro">Quello che costruisco non resta sempre dentro il codice. Due lavori sono depositati su Zenodo con DOI citabile, licenza aperta e misure rifacibili: perch&eacute; un&rsquo;idea di ingegneria vale esattamente quanto la prova che qualcun altro pu&ograve; ripetere.</p>
-            <div class="pub-orcid card">
-                <span><strong>ORCID</strong><a href="https://orcid.org/0009-0006-8449-6497" target="_blank">0009-0006-8449-6497</a></span>
-                <span><strong>Deposito</strong>Zenodo &middot; CERN</span>
-                <span><strong>Accesso</strong>Aperto</span>
-            </div>
-            <div class="pub-grid">
-                <article class="pub-card card">
-                    <span class="pub-kind">Articolo &middot; 19 agosto 2026 &middot; v2</span>
-                    <h3>miraIRIDE</h3>
-                    <p class="pub-sub">a Covered Progressive Index at Sixteen Bytes per Key</p>
-                    <div class="oled green"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  MIRAIRIDE :: 16.3 BYTES PER KEY :: LOOKUP 20.2 NS :: WRITE 53.8 MKEYS/S PEAK :: 0 COVERAGE VIOLATIONS :: DOI 10.5281/ZENODO.22012324 ::  </span></span></div>
-                    <p class="pub-text">Un indice per dati immutabili che risponde alle ricerche esatte <b>mentre si sta ancora costruendo</b>. Ogni chiave &egrave; verificata byte per byte e l&rsquo;intera struttura costa 16,3 byte per chiave: meno della met&agrave; di una hash map allo stato dell&rsquo;arte.</p>
-                    <p class="pub-text">La seconda versione aggiunge le fasi collettive entropiche: l&rsquo;ingestione genera da s&eacute; il proprio parallelismo &mdash; nessuna operazione atomica per record, una sola barriera per finestra &mdash; e la stessa primitiva serve anche le interrogazioni. Sul ferro di riferimento del 2012 (2&times; Xeon E5-2643 v2) la scrittura arriva a 46&ndash;54 Mkeys/s restando interrogabile; oltre i dodici core a fermare la corsa non &egrave; pi&ugrave; il software ma la banda della DDR3.</p>
-                    <p class="pub-text">Il confronto &egrave; un tribunale su un solo binario: RB-tree, unordered_map, ISAM, hash sharded, hash seriale e un B-tree di produzione, tutti con lo stesso generatore, lo stesso seme e lo stesso checksum di riferimento. Contro quel B-tree: <b>43&times;</b> in ingestione, <b>18&times;</b> in lookup, <b>3,2&times;</b> di memoria in meno. Il registro avversariale conta 27 predizioni depositate prima dei test: 14 confermate e 10 falsificate, tenute agli atti perch&eacute; ogni smentita si portava dietro la sua diagnosi.</p>
-                    <div class="pub-metrics">
-                            <div class="metric"><span class="value">16,3</span><span class="unit">byte per chiave</span></div>
-                            <div class="metric"><span class="value">20,2 ns</span><span class="unit">per lookup collettivo</span></div>
-                            <div class="metric"><span class="value">53,8</span><span class="unit">Mkeys/s in scrittura</span></div>
-                            <div class="metric"><span class="value">0</span><span class="unit">violazioni su 1,2 M</span></div>
-                    </div>
-                        <div class="project-tags">
-                            <span class="tag">Indice covered</span>
-                            <span class="tag">C++17</span>
-                            <span class="tag">SWAR / branchless</span>
-                            <span class="tag">Cache-conscious</span>
-                            <span class="tag">NUMA</span>
-                            <span class="tag">Amdahl</span>
-                        </div>
-                    <div class="pub-meta">
-                        <div><strong>Autore</strong>Umberto Meglio</div>
-                        <div><strong>Tipo</strong>Articolo scientifico</div>
-                        <div><strong>Licenza</strong>CC BY-NC-ND 4.0</div>
-                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.22012324" target="_blank">10.5281/zenodo.22012324</a></div>
-                    </div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.5281/zenodo.22012324" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22012324.svg" alt="DOI 10.5281/zenodo.22012324"></a>
-                        <a href="https://zenodo.org/records/22012324" target="_blank">Zenodo &rarr;</a>
-                        <a href="https://researchbriefs.org/works/01a01b2f-e68d-7212-9908-5697b005ba28" target="_blank">Research Briefs &rarr;</a>
-                        <a href="https://openalex.org/works/W7203674025" target="_blank">OpenAlex &rarr;</a>
-                    </div>
-                </article>
-                <article class="pub-card card">
-                    <span class="pub-kind">Software &middot; 3 aprile 2026 &middot; v1</span>
-                    <h3>miraNET</h3>
-                    <p class="pub-sub">a native Digital Runtime for autonomous business data operations</p>
-                    <div class="oled cyan"><span class="led"></span><span class="oled-view"><span class="oled-track">MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  MIRANET RUNTIME :: SINGLE PROCESS :: NATIVE C++17 :: IOCP DISPATCHER :: HOT RELOAD :: ROLLBACK ON FAILURE :: DOI 10.5281/ZENODO.19402571 ::  </span></span></div>
-                    <p class="pub-text">Una piattaforma nativa e autosufficiente: riceve i dati da un dispatcher web e li elabora interamente in C++ compilato. <b>Niente interpreti, niente container, nessuna dipendenza esterna.</b></p>
-                    <p class="pub-text">Compila da s&eacute; i propri microservizi a runtime, li versiona, torna indietro da sola quando un rilascio fallisce e si osserva attraverso un motore di storage interno. Il pool di connessioni al database &egrave; condiviso e governato al centro, l&rsquo;I/O &egrave; event-driven su IOCP, e una nuova logica di business pu&ograve; nascere da un prompt in linguaggio naturale affidato a un agente addestrato, senza intervento umano.</p>
-                    <p class="pub-text">Tutto gira in un <b>singolo processo</b>: &egrave; la scelta che rende possibile il resto &mdash; hot-reload a downtime zero, nessun salto di rete tra i servizi, una sola superficie da sorvegliare.</p>
-                    <div class="pub-metrics">
-                            <div class="metric"><span class="value">1</span><span class="unit">processo, tutto qui</span></div>
-                            <div class="metric"><span class="value">0</span><span class="unit">container o interpreti</span></div>
-                            <div class="metric"><span class="value">C++17</span><span class="unit">compilato nativo</span></div>
-                            <div class="metric"><span class="value">IOCP</span><span class="unit">I/O event-driven</span></div>
-                    </div>
-                        <div class="project-tags">
-                            <span class="tag">Digital Runtime</span>
-                            <span class="tag">Microservizi nativi</span>
-                            <span class="tag">Hot-reload</span>
-                            <span class="tag">IOCP</span>
-                            <span class="tag">MonetDB</span>
-                            <span class="tag">Zero downtime</span>
-                        </div>
-                    <div class="pub-meta">
-                        <div><strong>Autore</strong>Umberto Meglio</div>
-                        <div><strong>Tipo</strong>Software</div>
-                        <div><strong>Licenza</strong>CC BY 4.0</div>
-                        <div><strong>DOI</strong><a href="https://doi.org/10.5281/zenodo.19402571" target="_blank">10.5281/zenodo.19402571</a></div>
-                    </div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.5281/zenodo.19402571" target="_blank"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19402571.svg" alt="DOI 10.5281/zenodo.19402571"></a>
-                        <a href="https://zenodo.org/records/19402571" target="_blank">Zenodo &rarr;</a>
-                    </div>
-                </article>
-            </div>
-            <div class="pub-thread">
-                <h4>&#x1F517; Come si tengono insieme</h4>
-                <p><b>miraNET</b> &egrave; il runtime: un solo processo nativo che riceve, compila e serve. <b>miraIRIDE</b> &egrave; l&rsquo;indice che vive dentro quel runtime e gli d&agrave; la ricerca esatta a 16,3 byte per chiave. <b>miraFONT</b> &egrave; l&rsquo;alfabeto con cui entrambi si mostrano, dai display OLED a questa pagina. Tre pezzi, una sola idea: portare il dato il pi&ugrave; vicino possibile al metallo e poi lasciarlo parlare.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="mirafont">
         <div class="container">
             <div class="section-title">
