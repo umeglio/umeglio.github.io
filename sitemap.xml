@@ -74,10 +74,4 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
-    <url>
-        <loc>https://umeglio.github.io/docs/en/CONTRIBUTING.html</loc>
-        <lastmod>2026-03-19</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.2</priority>
-    </url>
 </urlset>
