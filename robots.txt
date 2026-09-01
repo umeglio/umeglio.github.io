@@ -1,0 +1,8 @@
+# https://umeglio.github.io/
+# Umberto Meglio - profilo professionale
+# Autore: Umberto Meglio - supporto alla creazione: Claude di Anthropic
+
+User-agent: *
+Allow: /
+
+Sitemap: https://umeglio.github.io/sitemap.xml
