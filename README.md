@@ -1,5 +1,5 @@
 # Umberto Meglio - Sito Web Professionale
-
+[![Le mie statistiche GitHub](https://github-stats-extended.vercel.app/api?username=umeglio)](https://github.com/umeglio)
 Questo repository contiene il codice sorgente del mio sito web personale e professionale, accessibile all'indirizzo [umeglio.github.io](https://umeglio.github.io).
 
 **[🇬🇧 English Version](README_en.md)**
