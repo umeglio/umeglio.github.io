@@ -38,7 +38,7 @@ Il sito è organizzato nelle seguenti sezioni:
 2. **Chi Sono**: Breve biografia professionale e informazioni personali
 3. **Competenze**: Visualizzazione delle competenze tecniche con barre di progresso
 4. **Esperienza**: Timeline delle esperienze professionali
-5. **Progetti**: Showcase dei principali progetti realizzati
+5. **Progetti**: Showcase dei principali progetti realizzati, ciascuno con il link a GitHub e, quando esiste, alla pagina dedicata
 6. **Pubblicazioni**: I lavori depositati su Zenodo con DOI citabile
 7. **miraFONT**: Il carattere tipografico originale che compone il sito
 8. **Contatti**: Informazioni di contatto e modulo per comunicazioni
@@ -69,6 +69,17 @@ Per modifiche locali e sviluppo, consulta la [Guida di Utilizzo](docs/it/UTILIZZ
 ## Contributi
 
 I contributi sono benvenuti! Per dettagli, consulta [CONTRIBUIRE.md](docs/it/CONTRIBUIRE.md).
+
+## Progetti con pagina dedicata
+
+Alcuni progetti hanno una pagina propria, pubblicata da GitHub Pages dal repository del progetto (cartella `docs/`) e richiamata dal badge **Sito &rarr;** nella sezione *Progetti*. Le pagine condividono la grafica del sito (tema miraNET e miraFONT) e scelgono italiano o inglese dalla lingua del browser, ricordando la scelta del visitatore.
+
+| Progetto | Pagina | Documentazione |
+| --- | --- | --- |
+| **PatternTriggerCommand** — servizio Windows in C++ nativo per l'automazione guidata dai file | [umeglio.github.io/PatternTriggerCommand](https://umeglio.github.io/PatternTriggerCommand/) | [README.it.md](https://github.com/umeglio/PatternTriggerCommand/blob/main/README.it.md) &middot; [README.md](https://github.com/umeglio/PatternTriggerCommand/blob/main/README.md) |
+| **Monet_OleDB** — provider OLE DB in ANSI C tra SQL Server e MonetDB | [umeglio.github.io/Monet_OleDB](https://umeglio.github.io/Monet_OleDB/) | [README.it.md](https://github.com/umeglio/Monet_OleDB/blob/main/README.it.md) &middot; [README.md](https://github.com/umeglio/Monet_OleDB/blob/main/README.md) |
+| **FTP Sync Service** — servizio Windows in C++ per la sincronizzazione con server FTP | [umeglio.github.io/ftp-sync-service](https://umeglio.github.io/ftp-sync-service/) | [README](https://github.com/umeglio/ftp-sync-service) |
+| **decibel.js** — fonometro dal browser | [umeglio.github.io/decibel.js](https://umeglio.github.io/decibel.js/) | [README](https://github.com/umeglio/decibel.js) |
 
 ## Pubblicazioni
 

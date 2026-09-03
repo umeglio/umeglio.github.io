@@ -58,12 +58,24 @@ The experience timeline is in the `#experience` section. Add new entries in this
 #### 5. Projects
 Projects are displayed in the `#projects` section. To add a new project:
 ```html
-<div class="project-card">
-    <h3>Project Name</h3>
-    <p>Project description</p>
-    <a href="project-link" class="project-link">View Project</a>
+<div class="project-card card">
+    <div class="project-header">
+        <h3>Project Name</h3>
+        <span class="project-type">Type &middot; Language</span>
+    </div>
+    <div class="project-info">
+        <p>Project description</p>
+        <div class="project-tags"><span class="tag">Native C++</span></div>
+        <div class="project-links">
+            <a href="https://github.com/umeglio/ProjectName" target="_blank">GitHub &rarr;</a>
+            &nbsp;&nbsp;
+            <a href="https://umeglio.github.io/ProjectName/" target="_blank">Website &rarr;</a>
+        </div>
+    </div>
 </div>
 ```
+
+The **Website &rarr;** link points to the project's dedicated page, published by GitHub Pages from the project repository itself (`docs/` folder, "GitHub Actions" source), as for Monet_OleDB and PatternTriggerCommand. The pages use the same miraNET theme and miraFONT as the site and are bilingual: texts are duplicated in `<span class="en">` and `<span class="it">`, the language is picked from the browser (`navigator.language`) and the visitor's preference is stored in `localStorage`. Remember to update `index.html` too (with **Sito &rarr;**) and the JSON-LD block (project `"url"`).
 
 #### 6. Contact Information
 Modify the `#contact` section to update your contact details.

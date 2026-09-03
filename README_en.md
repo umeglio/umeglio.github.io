@@ -39,7 +39,7 @@ The website is organized in the following sections:
 2. **About Me**: Brief professional biography and personal information
 3. **Skills**: Display of technical skills with progress bars
 4. **Experience**: Timeline of professional experiences
-5. **Projects**: Showcase of main completed projects
+5. **Projects**: Showcase of main completed projects, each linking to GitHub and, where available, to its dedicated page
 6. **Publications**: The works deposited on Zenodo with a citable DOI
 7. **miraFONT**: The original typeface the whole site is set in
 8. **Contact**: Contact information and messaging form
@@ -70,6 +70,17 @@ For local modifications and development, see the [Usage Guide](docs/en/USAGE.md)
 ## Contributing
 
 Contributions are welcome! For details, see [CONTRIBUTING.md](docs/en/CONTRIBUTING.md).
+
+## Projects with a dedicated page
+
+Some projects have their own page, published by GitHub Pages from the project repository (`docs/` folder) and linked by the **Website &rarr;** badge in the *Projects* section. The pages share the site's look (miraNET theme and miraFONT) and pick Italian or English from the browser language, remembering the visitor's choice.
+
+| Project | Page | Documentation |
+| --- | --- | --- |
+| **PatternTriggerCommand** — native C++ Windows service for file-driven automation | [umeglio.github.io/PatternTriggerCommand](https://umeglio.github.io/PatternTriggerCommand/) | [README.md](https://github.com/umeglio/PatternTriggerCommand/blob/main/README.md) &middot; [README.it.md](https://github.com/umeglio/PatternTriggerCommand/blob/main/README.it.md) |
+| **Monet_OleDB** — ANSI C OLE DB provider between SQL Server and MonetDB | [umeglio.github.io/Monet_OleDB](https://umeglio.github.io/Monet_OleDB/) | [README.md](https://github.com/umeglio/Monet_OleDB/blob/main/README.md) &middot; [README.it.md](https://github.com/umeglio/Monet_OleDB/blob/main/README.it.md) |
+| **FTP Sync Service** — C++ Windows service for FTP synchronisation | [umeglio.github.io/ftp-sync-service](https://umeglio.github.io/ftp-sync-service/) | [README](https://github.com/umeglio/ftp-sync-service) |
+| **decibel.js** — sound level meter in the browser | [umeglio.github.io/decibel.js](https://umeglio.github.io/decibel.js/) | [README](https://github.com/umeglio/decibel.js) |
 
 ## Publications
 

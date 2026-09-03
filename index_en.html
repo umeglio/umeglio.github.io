@@ -1431,7 +1431,7 @@
           "@type": "SoftwareSourceCode",
           "@id": "https://github.com/umeglio/PatternTriggerCommand#project",
           "name": "PatternTriggerCommand",
-          "description": "A Windows service in C++ that watches folders and files and triggers commands based on configurable patterns.",
+          "description": "Native C++ Windows service that watches folders with ReadDirectoryChangesW, recognises files with regex patterns and runs commands; parametric scheduler, web dashboard with statistics set in miraFONT and hot-reloadable settings.",
           "codeRepository": "https://github.com/umeglio/PatternTriggerCommand",
           "author": {
             "@id": "https://umeglio.github.io/#umberto-meglio"
@@ -1439,7 +1439,8 @@
           "isPartOf": {
             "@id": "https://umeglio.github.io/index_en.html#webpage"
           },
-          "programmingLanguage": "C++"
+          "programmingLanguage": "C++",
+          "url": "https://umeglio.github.io/PatternTriggerCommand/"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -1644,6 +1645,7 @@
                     <div class="skill-item"><div class="skill-name"><span>Visual FoxPro</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>Delphi</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>C++ / wxWidgets</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>Native C++ / Win32 API</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><div class="skill-name"><span>ETL (Extract, Transform, Load)</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
                 </div>
                 <div class="skill-category card">
@@ -1832,18 +1834,23 @@
                 <div class="project-card card">
                     <div class="project-header">
                         <h3>PatternTriggerCommand</h3>
-                        <span class="project-type">Windows Service &middot; C++</span>
+                        <span class="project-type">Windows Service &middot; Native C++</span>
                     </div>
                     <div class="project-info">
-                        <p>Enterprise-grade Windows service for file-based workflow automation. Monitors multiple folders, detects files via regex patterns and automatically executes custom commands. Includes web dashboard.</p>
+                        <div class="oled cyan"><span class="led"></span><span class="oled-view"><span class="oled-track">WATCH C:\INVOICES :: MATCH ^INVOICE.*\.PDF$ :: RUN PROCESS_INVOICE.BAT :: EXIT 0 :: DASHBOARD :8080 :: 3 TASKS SCHEDULED :: &nbsp;WATCH C:\INVOICES :: MATCH ^INVOICE.*\.PDF$ :: RUN PROCESS_INVOICE.BAT :: EXIT 0 :: DASHBOARD :8080 :: 3 TASKS SCHEDULED :: &nbsp;</span></span></div>
+                        <p>Native C++ Windows service for file-driven workflow automation: watches multiple folders with ReadDirectoryChangesW, recognises files with regex patterns and runs the associated commands. Parametric scheduler, web dashboard with statistics set in miraFONT and hot-reloadable settings, in a single dependency-free executable.</p>
                         <div class="project-tags">
-                            <span class="tag">C++</span>
-                            <span class="tag">Automation</span>
+                            <span class="tag">Native C++</span>
+                            <span class="tag">Win32 API</span>
+                            <span class="tag">Zero dependencies</span>
                             <span class="tag">Regex</span>
+                            <span class="tag">Scheduler</span>
                             <span class="tag">Web Dashboard</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/umeglio/PatternTriggerCommand" target="_blank">GitHub &rarr;</a>
+                            &nbsp;&nbsp;
+                            <a href="https://umeglio.github.io/PatternTriggerCommand/" target="_blank">Website &rarr;</a>
                         </div>
                     </div>
                 </div>
