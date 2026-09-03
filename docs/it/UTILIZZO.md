@@ -58,12 +58,24 @@ La timeline dell'esperienza si trova nella sezione `#experience`. Aggiungi nuove
 #### 5. Progetti
 I progetti sono visualizzati nella sezione `#projects`. Per aggiungere un nuovo progetto:
 ```html
-<div class="project-card">
-    <h3>Nome Progetto</h3>
-    <p>Descrizione del progetto</p>
-    <a href="link-al-progetto" class="project-link">Vedi Progetto</a>
+<div class="project-card card">
+    <div class="project-header">
+        <h3>Nome Progetto</h3>
+        <span class="project-type">Tipo &middot; Linguaggio</span>
+    </div>
+    <div class="project-info">
+        <p>Descrizione del progetto</p>
+        <div class="project-tags"><span class="tag">C++ nativo</span></div>
+        <div class="project-links">
+            <a href="https://github.com/umeglio/NomeProgetto" target="_blank">GitHub &rarr;</a>
+            &nbsp;&nbsp;
+            <a href="https://umeglio.github.io/NomeProgetto/" target="_blank">Sito &rarr;</a>
+        </div>
+    </div>
 </div>
 ```
+
+Il link **Sito &rarr;** punta alla pagina dedicata del progetto, pubblicata da GitHub Pages dal repository del progetto stesso (cartella `docs/`, sorgente "GitHub Actions"), come per Monet_OleDB e PatternTriggerCommand. Le pagine usano lo stesso tema miraNET e miraFONT del sito e sono bilingui: i testi sono duplicati in `<span class="en">` e `<span class="it">`, la lingua viene scelta dal browser (`navigator.language`) e la preferenza del visitatore e' salvata in `localStorage`. Ricordarsi di aggiornare anche `index_en.html` (con **Website &rarr;**) e il blocco JSON-LD (`"url"` del progetto).
 
 #### 6. Informazioni di Contatto
 Modifica la sezione `#contact` per aggiornare i tuoi dettagli di contatto.
